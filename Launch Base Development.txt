@@ -1,0 +1,18 @@
+Future Launch Base development
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. integrate dcoder's dll.
+2. extract ra2md.csf and ra2.csf to Resources on first load, rather than every mod launch. note in help that these can be removed to force a refresh
+3. language check for RA2/YR to get correct OptRA2Lang and OptYRLang
+
+4. include VC++ files (possibly make optional download - detect when trying to use syringe and dlls not present in windows!)
+5. LBP loader
+6. bag/idx/csf sizes for korea/china
+7. add new skins to setup.nsi? WEBSITE
+8. are there any other places that need a space check? new save games, new map snapshots, scripted video, log files, user config
+9. come up with own routine for generating unique machine id using CPU and MAC and optional HD volume
+10. use md5deep instead of vb code? - author=Jesse Kornblum
+11. new option - import XCC mod launcher
+12. Test that LB handles safe files properly.
+13. Ability to add links to programs?
+14. Residual file manager is unsetting all safe files when 1 is removed. This should be changed to just lose the missing file.
+15. sidec03.mix in side3 rejected for copying because cannot access sidec02md.mix. Is this correct?

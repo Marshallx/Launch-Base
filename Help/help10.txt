@@ -1,0 +1,325 @@
+Change Log
+Version 0.99.270 [2011-04-24]
+Fixed bug in TX FA2 integration that caused LB to crash.
+
+Version 0.99.267 [2010-12-18]
+Changed MD5 implementation to hopefully address a random MD5 inconsistency with Syringe.
+When activating a plugin, you should no longer get any complaints about modified game executables (assuming you have any modified executables).
+Right-clicking on a mod and clicking 'Check For Updates' didn't always give any feedback if there was a problem checking for updates. Fixed.
+
+Version 0.99.262 [2010-11-12]
+Fixed bug where Ares would fail to update if there were no subfolders inside the Resource folder (i.e. clean installs of Launch Base).
+
+Version 0.99.261 [2010-11-11]
+Fixed bug where Syringe would fail to update if there were no subfolders inside the Resource folder (i.e. clean installs of Launch Base).
+
+Version 0.99.260 [2010-07-10]
+Added some logging entries to help track down the cause of a problem updating Ares that a couple of users have reported.
+
+Version 0.99.259 [2010-07-08]
+Added a warning message to the Residual File Manager form. Hopefully this will avoid some mistakes non-advanced users are making in Advanced Mode.
+
+Version 0.99.258 [2010-06-29]
+Launch Base no longer rejects side*.mix files in mods (indices other than 1 or 2 used to be rejected, but Ares permits more than this).
+Buttons other than Cancel on the Ares Update Settings form are now disabled if branch data could not be downloaded.
+
+Version 0.99.257 [2010-06-10]
+Controls that had vanished from the main Options window are visible again. Added code to prevent this happening in future.
+
+Version 0.99.256 [2010-06-10]
+Removed button to access Ares Update Options from main Options as this caused Launch Base to crash.
+Corrected misspelling of "persistent" throughout Launch Base.
+Added 'Uses Ares' label to mod details so you can see which mods use Ares.
+
+Version 0.99.255 [2010-06-08]
+Mod website hyperlink on Check For Updates form was non-functional.
+Ares update check mechanism has been rewritten to reduce the amount of information that Launch Base needs in advance of connecting to the Renegade Projects' server.
+New menu option 'Ares > Ares Update Options'. All Ares update settings are controlled from here now.
+Ares branches are now picked up automatically from the server (as opposed to the 2 previously hard-coded branches, "stable" and "unstable").
+Corrected a spelling mistake in a log file entry.
+Updated help topics.
+Added 'Capture Ares Debug Files' option to have Launch Base move debug files to it's own Logs directory.
+Option to access Debug folder moved from Options form to Ares menu.
+
+Version 0.99.254 [2010-05-22]
+Fixed problem with main Launch Base window sometimes not being in the foreground after an Ares update.
+"subtitle.txt" and "subtitlemd.txt" are now accepted for activation when placed in the video folder of a mod.
+
+Version 0.99.253 [2010-05-21]
+Fixed bug where a mod that tried to include it's own DLL and INJ would fail because the INJ was never activated.
+Fixed bug where a mod could try to include the official Ares DLL and it's own version, thus causing an error message.
+
+Version 0.99.252 [2010-05-20]
+Added code to remove old Ares directories in the Resource folder after a failed Ares update.
+Updated the Help Topics, particularly with regard to Ares.
+
+Version 0.99.251 [2010-05-16]
+Updated for impending Ares 0.1 release. Default Ares build switched from Unstable to Stable. This will not affect users that have amended the default Launch Base options.
+
+Version 0.99.250 [2010-05-16]
+Updated for new Ares manual - HTML manual is now retained and opened by Launch Base.
+
+Version 0.99.249 [2010-05-03]
+Fixed bug with Residual File Manager that would lose all changes since the last run of Launch Base every time you opened the manager.
+
+Version 0.99.248 [2010-04-21]
+Fixed crash that could occur on new installs.
+
+Version 0.99.247 [2010-04-19]
+Fixed crash that could occur if user had no mods.
+
+Version 0.99.246 [2010-04-12]
+Fixed a problem that could prevent Ares updates succeeding if a change was recently committed.
+
+Version 0.99.245 [2010-04-11]
+When activating a mod, files in an 'interface' folder (if present) are no longer ignored.
+Updated Ares support so that ares.mix will be stored, verified and activated with Ares.dll and Ares.dll.inj.
+Added a brief notification of initialization progress to the splash screen.
+
+Version 0.99.244 [2010-04-04]
+Fixed bug where an empty tool/plugin list would cause the Launch/Deactivate button to be enabled and clickable. Clicking the button would cause a crash. Now the button is disabled in this case.
+Fixed bug where existing Launch Base users that had updated to version 0.99.242+ would be unable to download Syringe due to failing to download the revision data.
+
+Version 0.99.243 [20010-03-15]
+On launching a mod, when checking for playlists, you will now be presented with a menu to select the playlist you want to use for that game.
+thememd.ini is no longer permitted as a loose file when included by mods, as it would conflict with the YR Playlist Manager and the user's choice. thememd.ini can still be included in a MIX file however, as the user can choose to use that.
+Fixed bug where the mods list would always start with the Yuri's Revenge details displayed, even if that wasn't the highlighted mod.
+The last mod, plugin, fa2 mod and tool you had selected will now be remembered.
+Improved protection against Syringe and Ares tampering. If you have turned off Automatic Ares Update then you will need to launch a mod that uses Ares (you will receive an error message) then perform a manual update. You will need to do this twice (once for Ares and once for Syringe).
+
+Version 0.99.242 [2010-03-11]
+Again changed the way the Syringe and Ares revision numbers are checked.
+Various improvements to Internet requests (including setting a User Agent and removing superfluos calls).
+
+Version 0.99.241 [2010-03-10]
+Changed the way the Syringe and Ares revision numbers are checked to reduce server traffic and improve efficiency.
+
+Version 0.99.240 [2010-03-02]
+Adjusted mod list boxes to blend with the skin better.
+Ares build now defaults to Nightly, given that there is no Stable build yet.
+
+Version 0.99.239 [2010-02-16]
+Fixed crash on closing Help Topics when Check-For-Updates window was open.
+Right-clicking on a part of the mod list where there is no entry will no longer cause the popup menu to be shown.
+Improved Help Topics load speed.
+Residual File Manager window is no longer pointlessly resizable.
+00000000.256, YR1.dsk, and wdt.mix will no longer be treated as residual files.
+Installer no longer sets the Launch Base website link to the wrong URL.
+
+Version 0.99.238 [2010-02-03]
+Game logging options have been finalised as follows:
+(checkbox) Capture except.txt - Launch Base will either capture any except.txt files produced or delete them.
+(checkbox) Prompt For except.txt Description - As always, gives you the option to enter a description for the except.txt file produced.
+(checkbox) Enable Ares Logging - tells Ares whether or not to produce a debug.log file. Launch Base will make no attempt to intercept this.
+(button) Open Ares' Debug Folder - opens the Debug folder in My Computer, so that you can manually review/housekeep the files produced by Ares.
+DCoder will be restoring the generation of except.txt in Ares, although the filename will include a timestamp where appropriate.
+
+Version 0.99.237 [2010-02-02]
+The Debug folder produced by Ares is, for now, ignored, following issues with yesterday's release.
+Log files in other locations are once again handled correctly.
+Further changes in this area will be implemented once a decision is reached regarding how log files should be handled.
+
+Version 0.99.236 [2010-02-01]
+Under Update Options, you can now select whether to have Ares update using the Stable build or Nightly build (this has been approved by DCoder). Stable is the default, however it should be noted that no Stable build has yet been released.
+Ares SVN URL and Paths have been de-hardcoded.
+Updated logging handling to consider an Ares crash dump file as evidence of an Internal Error.
+Ares crash dump files will now be processed (either moved to LaunchBase\Logs or deleted).
+
+Version 0.99.235 [2010-01-03]
+Minor updates to Help Topics.
+Fixed bug where mods would not activate all files correctly unless Recompile Mod was turned on.
+
+Version 0.99.234 [2009-12-24]
+Warnings about low disk space on Launch Base start now display the disk space requirements in MB, not KB.
+Added a new Ares section to the menu. The options to update Syringe/Ares and view the Ares manual have been moved here.
+Added a form to allow the user to view/set Ares.ini settings from within Launch Base. These are NOT maintained by Launch Base - if a third party changes Ares.ini then Launch Base will not revert the changes. Available from the Ares menu.
+Ares.ini is now a reserved filename and cannot be used by mods. It will be treated like an original game file.
+Added support for FLAC files - Launch Base will now convert FLAC files to WAV automatically.
+Fixed bug where mod display/launch sounds would not be played.
+Added VideoBackBuffer and AllowVRAMSidebar options. Unlike the Ares.ini settings, these RA2MD.ini settings are maintained by Launch Base. Both revert to "no" if Advanced mode is turned off.
+
+Version 0.99.233 [2009-09-03]
+Disallowed except.txt, debug.txt and syringe.log from being marked as 'safe' residual files. If you had previously marked any of these as safe then unmark them now!
+Fixed internal error that would occur when saving an except.txt if the mod's name or version included invalid filename characters.
+
+Version 0.99.232 [2009-08-06]
+Fixed options tabs 'Game' and 'Update' (all the options had vanished).
+Advanced Mode no longer defaults to on for new Launch Base installs.
+
+Version 0.99.231 [2009-06-13]
+Changing the 'Verify Executables' option was not being saved and would revert to its previous state when Launch Base was next run.
+Turning 'Advanced Mode' on would not grant access to the Residual File Manager until Launch Base was next run. Fixed.
+Fixed unending crash that would occur on startup if user didn't have Red Alert 2 installed.
+Fixed uninstaller looking for wrong registry key (honest, it really is fixed this time).
+
+Version 0.99.230 [2009-06-08]
+Removed a csf option from the File menu - this was only intended for test purposes and was accidentally included in a previous release.
+Corrected tooltip of 'View Ares Update Notes' option.
+Update checks will now work correctly for update check files with Unix end of line characters.
+
+Version 0.99.229 [2009-05-31]
+Fixed crash that could occur after Launch Base had to create a folder path. Always crashed after downloading something via Check For Updates for the first time.
+Fixed bug where Launch Base would automatically relaunch as soon as a downloaded setup program had been launched.
+Fixed uninstaller looking for wrong registry key (note that the uninstaller is not supposed to work  if you have moved the Launch Base folder).
+Added in a change to assume that RSS feeds from renegadeprojects.com were available and try to download them without performing a preliminary check. This will work around the "failed to access Ares RSS feed" issue.
+
+Version 0.99.228 [2009-05-03]
+Improved Options window.
+New 'Verify Plugin Security Keys' option so you can disable this if you want to (don't disable this).
+You can now view details about which mods' update checks failed. Click on the link in the top-right corner of the window after an update check.
+In Check For Updates, plugins that you already had the latest version for were being listed under 'New Mods' instead of 'Installed Mods'. Fixed.
+Added a 'Residual File Manager' module (only available in Advanced Mode). See Help Topics for details.
+Added support for string tables. Launch Base can now merge CSF and TXT files provided by a mod. However, MIX file capabilities have not yet been added so the original ra2md.csf file is still inaccessible by Launch Base for now.
+Launch Base will now add all the labels used by the YRPM to a mod's CSF file automatically. This cannot be overridden, however a mod's own versions of those labels will be used in preference to the YRPM standard. This may be changed in future.
+New 'Loose File Mode' option if, for some bizarre reason, you didn't want Launch Base to generate MIX files. This option will be used automatically whilst Launch Base does not have MIX file capabilities. Note tht some files don't work outside of MIX files (e.g. sidebar graphics).
+Fixed bug where log file would say "Creating LaunchBase\Backup" regardless of what the actual path was that was being created.
+Fixed bug where Launch Base would delete Syringe after unpacking it, despite claiming that Syringe had been updated okay.
+
+Version 0.99.227 [2009-01-03]
+Fixed a bug that stopped the game from launching.
+
+Version 0.99.226 [2008-12-28]
+<movies02.mix> is now recognised as a stock file.
+'Updates Ares' menu option should [only] be available in Advanced Mode, however visibility was only set when first loading Launch Base. Fixed.
+Removed unused 'd/l Ares Documentation' checkbox from Options.
+Auto Ares Update option had no effect - Ares was always automatically updated. Fixed.
+Launch Base no longer comes with Syringe. Syringe will be downloaded and updated along with Ares.
+If the 'Verify Mod Files' option is enabled then the stock Ares files will be verified.
+If the 'Verify Executables' option is enabled then Syringe will be verified.
+Fixed crash that would occur when running the update check on the very first run of Launch Base.
+When (de)activating the Terrain Expansion, the details for the selected mod were not being updated. Fixed.
+Fixed a couple of issues with the splash screen progress bar.
+If you completely cleared the Mods folder after activating any plugins then the plugins weren't getting deactivated when Launch Base started up. Fixed, although you shouldn't really do that - use the Delete Plugin option from within Launch Base.
+
+Version 0.99.225 [2008-10-14]
+Launch Base 'downloading' sound can now be switched off from Options (along with any future Launch Base sounds).
+Fixed crash that could occur when right-clicking certain plugins from the available plugins list.
+Fixed bug where the right-click menu for plugins wouldn't display the 'Delete Plugin' option.
+Launch Base would warn that users had a modified executable if they had The First Decade. Fixed.
+Launch Base no longer wastes time verifying <yuri.exe>.
+After updating Ares, the Ares documentation will be placed in the Launch BAse program directory instead of simply being discarded.
+
+Version 0.99.224 [2008-09-17]
+Split 'Validate Checksums' option into 'Verify Mod Files' and 'Verify Executables'.
+Included Syringe version is no 0.6.0.0.
+
+Version 0.99.223 [2008-09-08]
+Fixed crash that could occur if you set Safety Space to a very high value. It is reccommended that you remove the SafetySpace= line from your LaunchBase.ini file.
+
+Version 0.99.222 [2008-09-07]
+Ares map snapshots should now be recognised by Launch Base and moved to the mod's saves folder.
+Numerous improvements to calculating required disk space. 
+Added a disk space check when restoring residual files.
+Safety Space is no longer configurable from Options. You can still override the default 64MB in LaunchBase.ini if you have to, but this is not recommended. In fact, you need to remove the "SafetySpace=" line from your existing LaunchBase.ini file in order to ensure you are using the default value.
+Update Syringe to version 0.5.0.2.
+
+Version 0.99.221 [2008-09-06]
+Clicking Cancel on the download progress window would not cancel the download until after it had completed. Fixed.
+Added Please Wait dialog to change log downloads.
+If the mod you launched had any saved games then the log file would record warnings that these files were missing when it came to deactivate the mod. This message was erroneous and no longer appears.
+
+Version 0.99.220 [2008-09-06]
+Fixed crash that could occur during an Internet timeout.
+Manual Ares updates wouldn't work if Automatic Ares Update was switched off. Fixed.
+After aborting an update check, further Internet acivities would always fail. Fixed.
+Manual Ares update now displays a please wait dialog.
+
+Version 0.99.219 [2008-09-05]
+Fixed 'Check For Updates' bug where plugins would be duplicated every update check.
+Fixed 'Check For Updates' bug where plugins would be listed as "Not Installed" when in fact they were.
+Improvements to disk space requirement calculation when activating mods.
+
+Version 0.99.218 [2008-09-04]
+When updating Ares, a console window would briefly appear for some users. This window is now prevented from appearing.
+The InstallPath setting in the registry was accidentally changed in the previous version, resulting in subsequent installers failing to detect Launch Base. This has been fixed.
+
+Version 0.99.217 [2008-09-03]
+Fixed bug where the (De)Activate Plugin button would not switch states after activating or deactivating a plugin.
+Fixed bug where plugins would not be recognised as activated and instead would be treated as residual mod files.
+Fixed bug where launching FinalAlert 2 YR would cause Launch Base to crash.
+Updated Help Topics.
+
+Version 0.99.216 [2008-09-02]
+Missing msinet.ocx file now included in installer.
+Fixed bug that may have caused Ares updates to fail for some users ("failed to decompress ares.tar.gz").
+
+Version 0.99.215 [2008-09-02]
+Numerous changes relating to the capturing of debug logs (debug.txt, except.txt and syringe.log). See Help Topics for details.
+Fixed bug where some log messages were assigned Verbose level instead of Normal level.
+Internet/update routines rewritten and removed local catalogue. Hopefully should be more efficient and, most importantly, should now cope with timeouts properly. Also fixes a couple of bugs.
+'Prompt For Ares Update' replaced by 'Automatic Ares Update'. If this option is disabled then Ares will not be updated automatically at all.
+Updating Ares via the Tools menu will now display a message box with the result of the update attempt.
+IPB videos less than 30 seconds long will be discarded automatically (was 15 seconds).
+
+Version 0.99.214 [2008-08-30]
+Fixed overflow error if a particularly large disk usage value was displayed.
+
+Version 0.99.213 [2008-08-30]
+Fixed "missing wininet.ocx" error.
+
+Version 0.99.212 [2008-08-30]
+Fixed bug that caused all plugins not to authenticate.
+Fixed bug that caused ares.tar to be left behind after an update, resulting in gunzip prompting the user if they wanted to overwrite this file during an Ares update.
+LiveLog window has a limit of 65535 characters. When this limit was reached, new log entries wouldn't be added to the LiveLog window. Now, text from the beginning of the LiveLog window is deleted to make room. This does not affect the log file.
+Removed some superfluos options.
+'Log Level' is now a slider with three options: Lite, Normal and Verbose. If you feel that any log messages turn up in the wrong places then please post suggestions on the forum.
+Added Advanced Mode option that enables/disables certain other options.
+Updated Help Topics.
+
+Version 0.99.211 [2008-08-27]
+wsock32.dll is now treated as an original game file. http://www.understorm.net/
+Added new option 'Prompt For Ares Update'. By default, this option is turned off and Ares will be updated automatically without prompting the user.
+Ares updates are now performed via the web instead of SVN. This reduces the disk usage of Launch Base and will hopefully let Windows Vista users auto-update Ares.
+
+Version 0.99.210 [2008-08-24]
+Fixed bug that caused Syringe not to run properly.
+
+Version 0.99.209 [2008-08-24]
+Command line switches in Options should now remove switches for which there is a checkbox (and check the checkbox of course).
+User will now be prompted if they enter the Ares -nologo switch as this is superceded by Launch Base's own 'Skip EA Logo Video' option.
+Further changes related to Ares testing - the old ExceptChecker mod will no longer work with the new system.
+
+Version 0.99.208 [2008-08-23]
+Fixed crash that would occur when clearing up screenshots, if you had made any in-game.
+Fixed bug that was preventing log file from being written to.
+Fixed bug that caused non-IPB files to be listed on the 'select a video to play' dialog.
+When activating a mod, some of the final tasks weren't updating the 'please wait' dialog. Fixed.
+Fixed crash that would occur whilst activating a mod that needed the DCoder DLL (the mod still can't be activated properly because the DCoder DLL isn't finished, but at least LB won't crash anymore).
+Numerous changes related to Ares testing.
+Changed log messages such that file operations are logged immediately before they take place, rather than immediately after.
+
+Version 0.99.205 [2008-08-23]
+Messages about insufficient disk space now say how much they need and on what drives.
+
+Version 0.99.204 [2008-08-21]
+In all numeric displays (e.g. disk usage), the user's regional settings will determine the thousand group separator (other digit groupings are not supported).
+Improved the performance of the Delete Mod option - this should no longer fail to remove empty directories and should run much faster than before.
+If a mod cannot be deleted for some reason, its folder will be opened automatically so you can review the files that weren't removed.
+Numerous code efficiency improvements and groundwork laid for automatically updating the Ares DLL (not yet available).
+Fixed bug where double-clicking an IPB file would run Launch Base but not launch the associated mod.
+Improvements to logging options - you can now choose what type of messages to log, although I generally recommend turning all messages on in case you encounter any problems.
+When checking for modified executables, <yuri.exe> is now checked as well.
+Reorganised Options window layout. Command line switches now has a bigger box and a scrollbar.
+Updated Help Topics.
+
+Version 0.99.203 [2008-08-05]
+Included mscomctl.ocx in setup program - some users may not have been able to run Launch Base without this file.
+Under certain regional settings, some disk usage displays could be corrupted. These should now be correct under any regional setting.
+
+Version 0.99.202 [2008-08-05]
+Fixed bug where deleted mods would not be removed properly from the mod list until Launch Base was restarted.
+Fixed bug where mods that were successfully deleted would also report that there was an error.
+Fixed bug where certain mods in the Mod Catalogue could report as not being installed when in fact they were.
+Fixed bug where if you downgraded a mod (now why would you do that?) then you would not be able to download the up-to-date version.
+Fixed bug where a mod would report as being up-to-date when in fact Launch Base had failed to download an update check URL.
+Fixed bug when deleting a mod where, if Windows failed to move a directory to the Recycle Bin, you would get two errors (one from Windows, one from Launch Base).
+Fixed crash on running an installer from the Download History.
+
+Version 0.99.201 [2008-08-04]
+Fixed crash that would occur on the first run of Launch Base (i.e. Mods folder was empty).
+
+Version 0.99.200 [2008-08-04] - First public beta test release
+De-selecting 'Show RA2 Mods' and 'Show YR Mods' at the same time could cause a crash. It is no longer possible to turn both off at once.
+Improved efficiency of the log file consolidation that occurs on Launch Base shutdown.
+Tools no longer have to include a program to launch - they can be documentation only.
+If a mod fails to activate then Launch Base will no longer report that the game failed to record a video (you never got as far as launching the game).

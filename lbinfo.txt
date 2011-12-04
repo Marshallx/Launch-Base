@@ -1,0 +1,30 @@
+Welcome to the YR Launch Base installer!
+Version: 1.0.0
+Last updated: 2006-11-12
+Website: http://marshall.cannis.net/LanchBase
+
+
+Why Launch Base?
+*Central program/menu for launching all your Yuri's Revenge mods, plugins and tools. Keeps everything organised and readily accessible.
+
+*Eliminates mod conflicts by handling all mod files for you. Automatically backs up and restores residual modfiles where appropriate.
+
+*Multitude of launching options can be configured in seconds - YR IPB video recording/playback, Windowed mode, RockPatch logging.
+
+*Files are stored in subfolders in an uncompressed and pre-compiled state, ready to install at a moments notice. For even faster launching, you can turn Persistant Mods on to keep the most recently launched mod installed.
+
+*Auto-update facility allows you to check for updates to your favourite mods, plugins and tools in a matter of seconds, and then choose an update to download and install.
+[Note that some mods may not make use of the auto-update facility, so you will need to check for updates to these the old fashioned way - check the specific mods' documentation.]
+
+*Plenty of safe-guards and security checks. Checks for sufficient disk space, ensures the correct action is taking with the various mod files and that no mod does something it shouldn't, authentication system for community plugins.
+If you experience a power cut, just run Launch Base briefly and it will recover automatically.
+Program logging option is available so you can monitor what Launch Base is doing with your files.
+
+*With all your mods, plugins and tools stored in Launch Base, you can move, rename, copy, backup and restore the Launch Base program directory without problems, thus keeping all your YR goodies in one place. Launch Base only has one registry entry (used by third party installers) and that is updated every time the program runs.
+[Note that some third party tools may require their own registry entries and so will not like being moved after install - check the specific tools' documentation.]
+
+
+Please visit the website if you have any questions or encounter any problems while using Launch Base.
+Launch Base Created by: Marshall
+MIX, BAG and CSF coding by: DCoder
+Website: http://marshall.cannis.net/LanchBase

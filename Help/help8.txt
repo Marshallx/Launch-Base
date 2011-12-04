@@ -1,0 +1,28 @@
+Developer Info
+=====How do I develop my mod under Launch Base?=====
+If you already have an in-production mod that you would like to move over to Launch Base then you should download and run the Launch Base Mod Creator. Using LBMC you can create an executable installer for your mod.
+Do so, and install the mod into Launch Base as if you were an end user.
+
+Your mod will then be listed in Launch Base and can be launched.
+
+Now if you want to make changes to your mod, you can make the changes directly to the files in the LaunchBase\Mods\your_mod folder. After making a change, simply go ahead and launch the mod via Launch Base. You do not need to recompile the installer.
+
+Once your mod is ready to be released to the public, then you can create a new installer using Launch Base Mod Creator and, this time, select the files from the LaunchBase\Mods\your_mod folder.
+
+By keeping the uncompiled mod files in a special development mod directory, you can make and test changes to your mod without creating a new installer or recompiling your files every time you make a change - Launch Base will automatically compile loose mod files as appropriate.
+
+
+=====Ares=====
+If you want to make use of the official Ares DLL then simply select that option in Launch Base Mod Creator. Alternatively, edit the LaunchBase\Mods\your_mod\launcher\liblist.gam file (which is a text file) and set UseAres=yes.
+
+If you want to inject your own DLL into the game instead of the official Ares DLL (for example, you might want to test an experimental version of Ares) then make sure you do not use the official Ares DLL. Instead, you should add the DLL and INJ file to LaunchBase\Mods\your_mod\syringe
+
+
+=====String Tables=====
+Launch Base will automatically merge CSF and TXT files into a main ra2(md).csf file when your mod is launched. TXT files use the same string table format as XCC Mod Creator:
+
+name:myunit=Just another basic tank
+
+Unlike the XCC format though, you can insert new lines into a string by entering "$\n". For example: Launch Base$\nkicks ass.
+
+However, only two formats of TXT file are supported: plain ANSI, and UTF-16 Little Endian. Other formats will be treated as plain ANSI which will either mean you get garbage in your string table or Launch Base crashes.

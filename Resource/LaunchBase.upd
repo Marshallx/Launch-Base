@@ -1,0 +1,12 @@
+[General]
+LatestVersion=0.99.270
+ChangeLogURL=http://marshall.strategy-x.com/LaunchBase/ChangeLog.txt
+Name=YR Launch Base
+Author=Marshall
+Date=2011-01-24
+Description=This is the main Launch Base program. You should always update to the latest version as soon as possible.
+Website=http://marshall.strategy-x.com/LaunchBase
+ModType=usertool
+
+[Downloads]
+FullMirror0=http://marshall.strategy-x.com/LaunchBase/LB_Setup.exe

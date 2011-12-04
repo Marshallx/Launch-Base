@@ -1,0 +1,32 @@
+Check For Updates
+You can access the Check For Updates facility from the Tools menu.
+
+The 'check for updates' facility will do two things:
+
+First, it will download a central 'mod catalogue' which includes some details about all the mods that are available for Launch Base. Any mods that you don't have will be added to the table of available updates.
+The mod catalogue does rely on mod authors informing Launch Base staff about new mods in order to keep it up-to-date, so make sure you let us know if you release a new mod.
+
+Second, it will try to download an Update Check File for each of the mods that you have installed. This is dependant on the author of the mod having chosen to make use of the update facility and providing Launch Base with a url to the update check file. You should check the mod's documentation to see if the update facility can be used to check for updates to that mod.
+
+Once the update check file has been downloaded, it will be checked for mod version details and download availability. If the version of the mod that is available is more recent than the version you have installed, a grid row will be added to the table of available updates, displaying some information about the update (such as how big the download will be).
+
+Once all mods' update check files have been checked, you will be able to select an update by clicking on the appropriate grid row.
+Once you have selected an update you have two options:
+1. Download and view the mod's change log file.
+2. Download and install the update.
+The first option may not be available - just like some mods won't make use of the update facility, some mods won't provide a change log. If a change log is not available then the button will be disabled.
+
+If you choose to download an update, a progress bar will be displayed along with some information about the amount of data downloaded. Once the download is complete, Launch Base will automatically close and the update installer will be started.
+
+Note that Launch Base does not provide its own 'resume broken downloads' facility so if you cancel a download then Launch Base will have to start the download from the beginning again.
+
+Once an installer has been downloaded it is added to the Download History (available from the Tools menu). You can use the Download History window to see details about installers that have previously been downloaded and also run them if you didn't originally complete the install, or delete them if they are no longer wanted.
+If you want to distribute the downloaded installers to your friends (e.g. you are attending a LAN party) then you can find the installers in the 'Setups' directory inside the Launch Base program directory.
+
+The 'check for updates' facility will also check for updates to Launch Base itself. It is strongly recommended that you periodically check for updates to Launch Base and install an update if it is available. Launch Base updates may include bug fixes (which could potentially be critical) and enhanced functionality.
+
+Note that after you have installed an update to an active plugin, the plugin will automatically be deactivated when Launch Base starts - you will need to re-activate the new version of the plugin.
+
+Launch Base can also try to perform update checks automatically for any mod you launch. See 'Launch Base Options' for more details.
+
+Note that, as with any information you send via the Internet, records of your update checks and downloads may be stored on the servers where the data/files are hosted. If, for privacy concerns, you do not wish to check for updates, you can turn off the automatic update checks under Tools > Options > Update.

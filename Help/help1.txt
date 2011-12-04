@@ -1,0 +1,179 @@
+Launch Base Options
+This is a description of the options that can be configured from the Tools > Options menu.
+
+Advanced Mode: (Recommended setting: OFF)
+Enabling Advanced Mode gives you access to several options that are normally unavailable. Such options are normally set to the default, recommended values.
+For the average user, these advanced options are an unneccessary complication that could be potentially misused.
+If, however, you are particularly savvy with computers and Red Alert 2 mods in particular then the advanced options may be useful to you.
+If Advanced Mode is disabled then you can ignore options marked "[ADVANCED]", below.
+
+=====PROGRAM OPTIONS=====
+
+[ADVANCED] Verify Mod Files: (Recommended setting: ON)
+This option will make Launch Base record a checksum of every file that gets activated, and then check the checksums of active files against the recorded checksum every time Launch Base starts. If the checksum of the active file does not match the recorded checksum, then this means that the active file has been tampered with outside of Launch Base and needs to be replaced. A warning will be displayed if signs of tampering are detected.
+Recording and comparing file checksums can increase the time it takes for Launch Base to load and increase the time it takes to activate a mod or plugin, so you can disable this option if you NEVER run non-Launch Base mods/plugins and are ABSOLUTELY CERTAIN that file tampering will NEVER occur.
+If you have permanently disabled Persistent Mods and Persistent Plugins (see below) then there is no need to verify mod files.
+
+[ADVANCED] Verify Executables: (Recommended setting: ON)
+If this option is enabled then, when launching the game, Launch Base will make sure that the game's executables have not been modified by a third-party patch (e.g. RockPatch or NPatch). If one or more executables have been modified then you will be asked if you still want to launch the game or not.
+Running the game with a modified executable is not recommended and is not supported. Ares *is* supported as it does not directly modify the executable.
+
+[ADVANCED] Verify Plugin Security Keys: (Recommended setting: ON)
+Launch Base is designed to verify a special security key file that all plugins are supposed to include. This security key file uniquely identifies the plugin and confirms that it is an official plugin approved by community leaders. By turning this option off you can save several seconds (perhaps minutes depending on the plugin and the speed of your system) when activating a plugin, however you also run the risk of activating an unofficial or unapproved plugin.
+It is useful to turn to this option off if you are developing a plugin and need to test it before requesting a security key (see also: Command Line Arguments - Developer Mode).
+
+[ADVANCED] Persistent Plugins: (Recommended setting: OFF if you activate non-Launch Base plugins)
+With this option turned off, any plugins that you activate in Launch Base will automatically be deactivated when Launch Base closes, and reactivated again when Launch Base next starts up. This is important if you activate any plugins outside of Launch Base, to ensure that a separate set of plugins are maintained between the Launch Base user and the non-Launch Base user.
+For example, some non-Launch Base mod installers may include prerequisites such as the Terrain Expansion which could overwrite the Launch Base-activated Terrain Expansion plugin, or in turn be overridden by the Launch Base plugin files.
+See 'Important Warnings' for more information.
+
+[ADVANCED] Persistent Mods: (Recommended setting: OFF if you run non-Launch Base mods)
+This option prevents a launched mod from being deactivated when the game closes.
+If a mod is already active and you choose to launch it again, then the mod will not be re-activated before launching Yuri's Revenge.
+With 'Persistent Mods' disabled, a mod will be deactivated automatically once Yuri's Revenge closes.
+If you launch any mods outside of Launch Base then you MUST disable 'Persistent Mods'.
+Do NOT manually delete mod folders from Launch Base if Persistent Mods is turned on - if you do then any pre-existing user-generated content (such as save games) could be overwritten.
+See 'Important Warnings' for more information.
+
+[ADVANCED] Recompile Mods: (Recommended setting: OFF, unless you are developing a mod or are low on disk space)
+Some mods require certain files to be compiled before they are activated (usually audio.bag and ra2md.csf).
+If this option is disabled then once a mod has been compiled it will not need to be recompiled in future, because the compiled files are saved for future use. This speeds up subsequent launches of the mod, but does use up more disk space.
+If 'Recompile Mods' is enabled then the compiled files are not saved and will need to be recompiled every time the mod is launched.
+
+[ADVANCED] Loose File Mode: (Recommended setting: OFF)
+This option prevents Launch Base from generating expandmd98.mix. Instead, all files that would normally go into this MIX file are simply copied loose to the Red Alert 2 directory when a mod is activated. This option requires a small amount of extra disk space and can cause minor additional disk fragmentation so is not recommended. The option only exists because MIX file generation is not possible without DCoder's DLL (which is not yet available and, as such, this version of Launch Base will always use loose file mode even if you have turned the option off).
+
+Automatic Terrain Expansion:
+The Terrain Expansion is the only plugin that may conflict with some (albeit very few) mods, so you might need to disable it from time to time. By switching 'Automatic Terrain Expansion' on, Launch Base will autoamtically activate the Terrain Expansion (if you have it) for any mods that allow it (and automatically deactivate it for mods that don't). The only reason you might not want to turn this option on is if you are playing in a network/Internet game and not all players have the same version of the Terrain Expansion installed (this has been known to cause Reconnection Errors in-game).
+
+Check Mod YPL Files: (Recommended setting: ON)
+YPL files are custom playlists for use with the YR Playlist Manager. They do not include the music files themselves, just settings to enable the playing of tracks that you may already have, or tracks that are included with a mod.
+Some mods may include one or more YPL files with recommended playlist settings for that mod.
+By enabling this option, Launch Base will check that you have activated one of a mods YPL files (if any) and warn you if you haven't done so, giving you the chance to abort the launch of the mod in order to go and take a look at these files in the YR Playlist Manager and decide if you want to activate one.
+
+Show RA2 Mods:
+This checkbox allows you to specify whether or not the list of mods on the Mods tab will include any Red Alert 2 mods you have.
+
+Show YR Mods:
+This checkbox allows you to specify whether or not the list of mods on the Mods tab will include any Yuri's Revenge mods you have.
+
+Safety Space: (Recommended setting: 256MB or higher)
+Launch Base tries to calculate the amount of disk space required to compile or launch a mod, however there are some disk space requirements that can't easily be calculated. Safety Space is the amount of space that Launch Base will try to reserve for this unforeseen amount. If available disk space drops below this level then Launch Base will not run.
+The slider lets you set an appropriate value for Safety Space. It is recommended that this value be set as high as possible.
+
+Mod Display Sounds: (Recommended setting: ON)
+When a mod's details are displayed in Launch Base, a sound is played (if the mod in question has included the appropriate sound). This option lets you disable such sounds.
+Mod Display Sounds also controls the Launch Base startup and shutdown sounds.
+
+Mod Launch Sounds: (Recommended setting: ON)
+This option is much the same as 'Mod Display Sounds', but is for controlling the sound that plays when a mod starts to launch.
+
+Associate IPB Videos with Launch Base:
+Clicking this button will associate IPB files with Launch Base. Once this is done you will be able to double-click on an IPB file in Windows' Explorer, causing Launch Base to run, launching the appropriate mod and playing the scripted video. See 'Play Video', below, and Shortcut Options for more information
+
+
+=====GAME OPTIONS=====
+
+Windowed Mode:
+If set, the game will be run with the '-WIN' switch, displaying it in a window.
+Note that some users have reported problems running the game in windowed mode.
+
+Skip EA Logo Video:
+Before the game begins loading, you are shown a short video featuring the Electronic Arts and Westwood Studios logos. You can press Escape to stop the video and continue loading the game.
+Some mods include their own replacement video that is either empty, or has an appropriate video for the mod.
+By enabling 'Skip EA Logo Video', Launch Base will provide a blank replacement video for mods that do not include their own video.
+
+Record Game Video:
+If set, the game will record a scripted video of each session. See 'Play Game Video' for more details.
+When the game closes you will be asked if you want to save or delete the latest video.
+
+Play Game Video:
+With this option enabled you will be asked if you want to load a the game scripted video when you launch a game mod.
+Such videos will repeat your interactions with the game interface so as to produce an exact recreation of a past game.
+You can press Escape on the keyboard at any time to cancel the video and put yourself in control (so don't push Escape to skip the Westwood/EA logo video at the beginning).
+In order to play a video you must first have recorded one for the mod you wish to play (the videos are mod-specific).
+Note: If you select a video to play then you won't be able to record a video. If you would rather record a video instead then you should choose the 'do not play a video' option when asked which video you want to play.
+
+Campaign Speed Control:
+This option tells the game to make the in-game speed control slider available in campaign games.
+
+Multiplayer Debug Mode: (Recommended setting: ON)
+If set, the game will be run with the '-MPDEBUG' switch. This enables two new key assignment functions under 'Options > Keyboard' in the Debug section:
+·Multiplayer Debug Info: Toggles the output of extra debug information to the screen.
+·Game Sync logging: Toggles the writing of multiplayer info files (this seems to be responsible for the SYNC*.txt file writing, which are created by default in all multiplayer games). Note that, when Multiplayer Debug Mode is enabled, less debug data is actually written to the file, even with the sync logging switched on. Minimising access to these files can help to speed up multiplayer games.
+Unfortunately there will also be a number displayed in the top left corner of the screen - it is not known what this number represents.
+
+[ADVANCED] Custom Command Line Switches: (Recommended setting: blank)
+This text box allows you to enter command line switches that are not offered by the other Launch Base options. For example, if you are going to launch a mod that uses Ares then you could use the "-noaudio" switch here if you wanted to.
+The use of custom switches in Launch Base is not supported as these could potentially affect your game directory in unforeseeable ways. You should leave this text box blank unless you know exactly what you are doing.
+
+[ADVANCED] Video Back Buffer: (Recommended setting: OFF)
+This is a video setting in ra2(md).ini. Because of the way that the game's drawing routines work, you should prefer all surfaces to be stored in memory. Therefore disabling the video back buffer should improve performance, although this is not the default setting for the game.
+
+[ADVANCED] Allow VRAM Sidebar: (Recommended setting: OFF)
+Like Video Back Buffer, this is another setting in ra2(md).ini that you should want to leave off. It is off by default in the game.
+
+
+=====UPDATE OPTIONS=====
+
+Automatic Update Check: (see Check For Updates)
+Rather than remembering to check for updates every so often, you can have Launch Base perform an update check automatically whenever you launch a mod or activate a plugin, to make sure you always have the latest version. If you are not connected to the Internet at the time then the automatic update check will be skipped.
+If you have multiple versions of a mod installed, then the automatic update check will only be performed if you are launching the latest version that you have - it is assumed that you will not want to update legacy versions.
+
+Only Download Full Installers: (see Check For Updates)
+When Launch Base checks for updates, if you already have a version of a mod for which an update-only installer is available, then Launch Base will prefer to download an 'update-only' installer over a 'full' installer (because the size of the download will be smaller). If you prefer to have Launch Base only download full installers then you can enable this option - Launch Base will then ignore update-only installers. Note that, with this option enabled, Launch Base will never download an update-only installer even if it is the only installer available.
+
+
+=====ARES UPDATE OPTIONS=====
+
+Ares' update options are under a separate menu, accesible from the main Launch Base window or from a button on the Options form.
+
+[ADVANCED] Automatic Ares Update: (Recommended setting: ON)
+Ares is normally updated automatically and silently. However, if you are an Ares developer then you may not want your Ares files to be updated automatically. If this is the case then you can disable this option, which will prevent Launch Base from updating Ares. If this option is disabled then you can command Launch Base to perform an Ares update by clicking the 'Update Syringe & Ares Now' button.
+
+[ADVANCED] Ares Release: (Recommended setting: the latest stable version)
+As Ares is developed, additional releases or 'branches' may become available, to provide support for earlier versions or to allow the testers to access in-development features. Simply click the release of Ares you want to use so that it is highlighted and Launch Base will then use that release when launching a mod.
+Generally, you should only need to change the branch from the default if you want to play a mod that uses an earlier version of Ares and is not compatible with the latest release.
+
+
+=====LOGGING OPTIONS=====
+
+Write Log File: (Recommended setting: ON)
+With this option enabled, Launch Base will generate a log file (LaunchBase.log) of the operations it performs (see 'Log Level', below). This is mainly used for debugging purposes (either of an in-development mod or Launch Base itself). You can use the log file to see what Launch Base is doing with your files.
+Disabling 'Write Log File' does not delete the file, it merely stops Launch Base from writing to it.
+
+Initialise Log on Startup: (Recommended setting: OFF)
+This option will erase the existing log file everytime Launch Base starts. This means that the log file in the Launch Base program directory will only contain the log entries from the most recent run of Launch Base.
+
+[ADVANCED] Enable LiveLog: (Recommended setting: OFF)
+If LiveLog is enabled then you can display the LiveLog window by selecting the LiveLog option from the Tools menu. The LiveLog window displays log entries as they are written to the log file. 'Write Log File' does not have to be enabled to see what messages would have been written to it.
+
+Log Level: (Recommended setting: Normal or Verbose)
+This slider controls how much information is recorded in the log file.
+Lite - Only essential log messages are recorded.
+Normal - Records messages which can put the Lite messages into context or otherwise be helpful.
+Verbose - Detailed messages, some of which are of a technical nature and unformatted as they are generally intended for Launch Base debugging purposes.
+
+Max Log Size: (Recommended setting: 2,048 KB)
+This slider lets you set the maximum size the log file can be. Note that, whilst Launch Base is running, the log file will grow indefinitely. When Launch Base closes, it will consolidate the log file so that it is no larger than the size specified by this option.
+By default, the maximum size of the log file is 2,048KB (2MB). If this option is set to zero then the log file will never be consolidated.
+
+Capture except.txt: (Recommended setting: ON)
+When the game encounters an Internal Error it will produce a debug file named 'except.txt'.
+This file may be useful to a mod author, to help them debug their mod.
+This file will record an EIP value, indicating where in the game engine the error occurred. You can look this up on ModEnc to see if it is a known error and how you can resolve it in your own mod.
+With 'Capture except.txt' enabled, Launch Base will move any except.txt files to the LaunchBase\Logs folder. If youd disable 'Capture except.txt' then any except.txt files will be deleted.
+
+Prompt For except.txt Description: (Recommended setting: ON)
+If the game encounters an Internal Error (i.e. produces an except.txt file) then you will be prompted to enter a brief description for the except.txt file. If this option is disabled then the except.txt file will not be given a description.
+
+Enable Ares Logging:
+Ares includes the option to generate a verbose log file that may be useful to a mod's author or to the Ares developers if an error occurs or if something is not behaving as expected. However, because it can have an (albeit minor) effect on the game's performance, you may want to leave this option off if you are not assisting with any testing.
+
+Capture Ares Debug Files:
+If Ares generates any files in the debug folder whilst you are playing the game, Launch Base will move these files to its own 'Logs' directory and add the name and version of the mod you were playing to the filename.
+
+Show Ares' Debug Folder:
+Ares generates it's debug.log file inside a Debug folder within your Red Alert 2 folder. If an internal error occurs then Ares may also generate a large crash dump file to assist with debugging.
+Launch Base does not capture debug.log or Ares' crash dump files, and does not perform any housekeeping on the Debug folder.
+You may need to access the Debug folder in order to submit these files to the relevant developers, or to simply delete old files that are using up disk space.

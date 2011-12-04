@@ -1,0 +1,33 @@
+What is Launch Base?
+Launch Base is the ultimate launching platform for Red Alert 2, Yuri's Revenge and FinalAlert 2 YR.
+
+With all the mods, plugins and patches that are available, you face an an organisational nightmare.
+Launch Base brings order to that chaos and makes the world of Yuri's Revenge mods much easier for players and authors alike.
+
+Below are some of the common problems that Launch Base can solve for the player:
+    • Clearing up old mod files that are preventing you from playing the original game or another mod.
+    • Activating a mod for you when you don't know how or are worried about breaking something.
+    • Switching mods is time consuming and can be prone to error. Launch Base does it all for you in seconds.
+    • Save games aren't compatible between mods. Launch Base will keep track of these for you.
+    • You want to make a map using the Terrain Expansion? Launch Base will integrate the TX into FA2YR for you.
+    • You want to play a mod that requires Ares? Awesome! Launch Base will download Ares and activate it for you.
+
+Launch Base also offers a range of benefits to mod authors:
+    • Reduces the installation/activation issues that end users encounter.
+    • A fast way to launch your in-development mod. Make a quick change and relaunch in seconds.
+    • Automatic Ares integration - always be using the latest test version of Ares.
+    • Automatic merging of TXT files into the core CSF string table.
+    • Automatic creation of MIX and BAG files (coming soon).
+    • Launch Base Mod Creator creates a feature-rich executable installer for your mod.
+
+Need some more benefits?
+    • Automatic Check For Updates facility for Launch Base, Ares and mods too.
+    • Numerous launching options to fully customise the way you enjoy the game and its mods.
+    • Automatic handling of scripted IPB videos, screenshots and saved games.
+    • Logging options for both Launch Base and Ares to help diagnose problems with these as well as your mods,
+    • Plenty of safe-guards and security checks. Be sure that nothing goes awry or some mod inadvertently changes a core file.
+    • Automatic integration of additional soundtracks (coming soon).	
+
+As a player, almost everything in Launch Base should be pretty intuitive. As a mod author you might need a bit of help with your initial set up but otherwise you should find Launch Base easy to work with. Nevertheless, it is strongly recommended that you read through these help topics before embarking on your adventure!
+
+If there's anything that you feel isn't explained clearly enough in this documentation, or encounter any problems using Launch Base, then please do contact us at http://marshall.strategy-x.com/LaunchBase

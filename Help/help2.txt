@@ -1,0 +1,23 @@
+Plugins
+=====What is a plugin?=====
+A plugin is a mod or add-on that can work alongside another mod. Most mods don't care if any plugins are present, however some mods might require specific plugins and/or prohibit others.
+
+For example, map packs and soundtracks (for use with the YR Playlist Manager) are treated as plugins. You can pretty much play any mod with or without any map packs or soundtracks although some mods might be designed to work better with certain plugins (for example, a mod might include the Assault game mode which only works if you have at least one Assault map pack). In a multiplayer game, two players can have different sets of plugins installed and still play in the same game (unless you wish to play on a map pack map that only one player has).
+
+=====Terrain Expansion=====
+The only plugin which isn't quite so simple is the Terrain Expansion.
+
+Some mods require the Terrain Expansion to be activated. You will need to download the Terrain Expansion plugin, and then activate it from the Launch Base plugins menu, before you can launch a mod that requires it.
+
+Note that a few mods may require that the Terrain Expansion is NOT active. If this is the case then simply select the Terrain Expansion in the plugins menu and click the Deactivate button.
+
+Most mods don't mind either way if the Terrain Expansion is active or not.
+
+Note that, in a network or Internet game, all players must activate the same version of the Terrain Expansion otherwise reconnection errors may occur.
+
+=====FinalAlert 2 YR and the Terrain Expansion=====
+Some FA2 mods may also require the Terrain Expansion FA2 mod to be available.
+
+Launch Base is able to combine the Terrain Expansion FA2 mod with one other FA2 mod if necessary.
+
+Most FA2 mods don't mind either way if the Terrain Expansion FA2 mod is combined, in which case there is a checkbox that you can tick (or not) on the FA2 mods menu to specify whether or not you wish to integrate the Terrain Expansion FA2 mod.

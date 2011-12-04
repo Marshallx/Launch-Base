@@ -1,0 +1,12 @@
+[General]
+LatestVersion=1.006
+ChangeLogURL=
+Name=Red Alert 2
+Author=Westwood Studios
+Date=2000-09-23 to 2001-05-25
+Description=Latest official patch for the Korean version of Red Alert 2. Note that Yuri's Revenge already includes this patch.
+Website=
+ModType=mod
+
+[Downloads]
+FullMirror0=ftp://ftp.westwood.com/pub/redalert2/update/RA21006KO.EXE

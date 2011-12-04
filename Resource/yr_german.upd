@@ -1,0 +1,12 @@
+[General]
+LatestVersion=1.001
+ChangeLogURL=
+Name=Yuri's Revenge
+Author=Westwood Studios
+Date=2001-10-10 to 2001-11-12
+Description=Latest official patch for the German version of Yuri's Revenge.
+Website=
+ModType=mod
+
+[Downloads]
+FullMirror0=ftp://ftp.westwood.com/pub/redalert2/update/YURI-1001-GERMAN.EXE

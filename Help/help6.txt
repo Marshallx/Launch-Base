@@ -1,0 +1,19 @@
+Residual Files
+=====What are residual files?=====
+When you first install Red Alert 2 and Yuri's Revenge, there are no residual files - all the files in the Red Alert 2 directory are original game files.
+
+If you copy, say, a Word document to your Red Alert 2 directory, then that is a residual file (although not one that is of any concern to mods).
+
+If you install a non-Launch Base mod, then ALL of that mod's files are residual mod files and must be removed before another mod can be launched (otherwise the mod may not work as expected or even at all).
+
+Launch Base will remove ALL residual files when launching a mod, by temporarily moving them to a backup folder. When you exit the game, Launch Base will restore residual files by moving them from the backup folder back to the Red Alert 2 directory.
+
+=====Residual File Manager=====
+The Residual File Manager is only available in Advanced Mode.
+
+In general, you shouldn't have any residual files in your Red Alert 2 directory. However if you do then the Residual File Manager allows you to mark certain files as "safe" if you are certain that they will not interfere with any mods or plugins (for example, Word documents).
+
+You should NOT mark residual mod files as safe, however not all plugins have been released for Launch Base yet. If you have, say, some soundtracks for the YRPM or the Assault map packs, then you might want to mark these as safe so that you can use them in conjunction with Launch Base mods.
+
+The Residual File Manager can be accessed from the Tools menu (only if Advanced Mode is switched on).
+The interface is fairly self-explanatory - select a file from the Residual Files list and click the button labelled "Safe" to mark it as safe and it will be moved to the Safe Files list. Select a file from the Safe Files list and click the button labelled "Unsafe" to move it back to the Residual Files list.

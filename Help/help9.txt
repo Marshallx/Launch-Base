@@ -1,0 +1,14 @@
+Frequently Asked Questions
+====How do I clear residual mod files from my Red Alert 2 directory?====
+If you are referring to mod files that are left over from a time when you weren't using Launch Base:
+1. Enable Advanced Mode (Tools > Options) if you have not already done so.
+2. Open the Residual File Manager (Tools > Residual File Manager)
+3. Select each file in turn from the Residual Files list and click the button labelled "Delete".
+4. Close the Residual File Manager.
+5. Disable Advanced Mode if you had to enable it.
+
+If you are referring to a mod that Launch Base has activated:
+Any mod files that Launch Base introduced should have been removed automatically. The only cirumstances when this wouldn't happen are:
+Launch Base was terminated unexpectedly (e.g. by a power cut), or you enabled the persistent Mods option (Tools > Options).
+If Launch Base was terminated unexpectedly then just run Launch Base and it will recover automatically, removing the mod files that were left behind. However, if you have activated a mod outside of Launch Base since such an event occurred then some files may have been replaced and you may not want to lose them. As is described in the Important Warnings topic, you should not have done this. You will need to manually save any files that you want to keep and then reinstall the game.
+If you have enabled Persistent Mods then simply disable that option and Launch Base will deactivate the active mod. However, as above, if you have activated a mod outside of Launch Base whilst a Launch Base mod was active then you have disregarded the advice in the Important Warnings topic and so will need to manually save any files that you want to keep before reinstalling the game.

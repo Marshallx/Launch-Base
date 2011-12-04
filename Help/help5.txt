@@ -1,0 +1,51 @@
+Syringe / Ares
+=====Syringe=====
+Syringe is a program created by pd which can 'inject' code into a running executable without modifying the executable itself. In particular, Syringe is used to inject modifications and new features into Yuri's Revenge that would otherwise not be possible through 'normal' modding.
+
+Because the executable itself is not modified (or 'patched') in any way, the process is quite safe.
+
+Launch Base will automatically download the latest version of Syringe and automatically knows how and when to use it.
+
+
+=====Ares=====
+Ares is the ultimate patch for Yuri's Revenge created by dedicated fans and modders of the game. It is applied to the game using Syringe.
+
+If the mod you are launching requires the official Ares patch then Launch Base will automatically download the latest version of Ares and inject it into the game at run time.
+
+
+=====Syringe Caveats====
+In order for Syringe (and therefore Ares) to run you need to install the VisualC++ 2008 Redistributable Package from Microsoft. If you find that you want to run a mod that uses Syringe and you get an error saying that "Syringe failed to launch Yuri's Revenge", then you should install this package which can be downloaded from:
+http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF&displaylang=en [for the x86 version]
+http://www.microsoft.com/downloads/details.aspx?familyid=BD2A6171-E2D6-4230-B809-9A8D7548C1B6&displaylang=en [for the x64 version]
+
+It should also be noted that Syringe has only been tested with Windows XP Professional [x86] and Windows Vista Ultimate [x64]. pd advises that Syringe should work with Windows 2000 Professional or greater. Other versions of Windows (such as Windows XP Home) may not have the neccessary components to run Syringe - in which case any mods that require Syringe will fail to launch.
+
+
+=====RockPatch/NPatch=====
+Third party patches, such as the RockPatch or NPatch, are NOT supported by Launch Base. You can patch the games' executables if you wish however you may encounter errors in game. You will get a warning if the checksum of the game's executable isn't recognised but you won't be prevented from launching the game if you really want to.
+
+If Syringe injects into a modified executable then the results are unpredictable and neither Launch Base nor Syringe support this usage. Ares should only be used with an up-to-date and unmodified version of the Yuri's Revenge executable.
+
+
+=====Ares Features=====
+From time-to-time, Ares (and indeed any DLL file injected into the game by Syringe) has provided features that can affect the contents of your Red Alert 2 folder. This, of course, can cause issues for Launch Base; however every effort has been made to support such features. If you encounter any issues using Ares with Launch Base then please let us know.
+
+Ares Logging/Crash Dumps
+See 'Launch Base Options' for information about how Ares' log files are handled.
+
+Screenshot Filename
+This feature is supported by Launch Base, but only if the mod author has provided Launch Base with the correct filename format.
+If the wrong format has been provided then wrong-mod screenshot files may be left behind in your Red Alert 2 folder, or they may accidentally be moved to a different mod.
+[COMING SOON: Launch Base will not require mod authors to provide this information - it will work it out itself]
+
+Map Snapshots
+Launch Base will treat Map Snapshots like Save Games. They will be copied in and out of the Red Alert 2 folder when appropriate on a mod-specific basis.
+However, this is only supported if the Map Snapshot filenames are not customisable by mod authors. If the Map Snapshot filename format is changed then wrong-mod map snapshot files may be left behind in your Red Alert 2 folder, or they may accidentally be moved to a different mod.
+[COMING SOON: Launch Base will not require mod authors to provide this information - it will work it out itself]
+
+RandMap.map
+This map file will be treated like a custom map. It will be left in your Red Alert 2 folder regardless of what mod you are playing.
+
+Ares.ini
+Launch Base will not remove Ares.ini from the Red Alert 2 directory when activating a mod, and will not allow mods or plugins to include this file.
+Launch Base also provides an interface to allow you to change the settings in Ares.ini (the interface is available from the Ares menu) however this is only available when Advanced Mode is turned on. You should refer to the Ares documentation for information about the available settings in Ares.ini.

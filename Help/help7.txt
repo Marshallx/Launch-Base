@@ -1,0 +1,39 @@
+Command Line Arguments
+Launch Base provides some command line arguments that you can use in shortcuts to the program.
+These arguments can automatically launch specific mods, or can be used to temporarily enable or disable certain options.
+The available arguments are listed below.
+
+[file.ipb]
+If file.ipb exists and is located within a valid mod's folder, then Launch Base will automatically launch that mod and play the specified IPB video.
+If file.ipb includes any spaces in the filename then it should be enclosed in quotes.
+Remember that Launch Base automatically adds a date/time stamp and version information to new IPB filenames so make sure you type the full filename correctly.
+You can associate IPB files with Launch Base - double clicking them will run Launch Base with the chosen file as the only argument.
+This argument must be the very first argument otherwise it will be ignored. This argument will also be ignored if the -game switch has been used and the folder doesn't match. However, if you do use the -game switch, then file.ipb can be a relative path. For example:
+    LaunchBase.exe "C:\LaunchBase\Mods\my mod\my video file.ipb"
+    LaunchBase.exe "my video file.ipb" -game "my mod"
+...will both have the same effect.
+
+-game subfolder
+Subfolder should be a folder within your Launch Base 'Mods' directory that contains a Launch Base mod.
+Do *not* specify a mod's actual name - only the folder name.
+This mod will be automatically launched once Launch Base has loaded. Launch Base will close automatically once Red Alert 2/Yuri's Revenge closes.
+Use        LaunchBase.exe -game ORIGINALYR        for unmodded Yuri's Revenge.
+Use        LanuchBase.exe -game ORIGINALRA2        for unmodded Red Alert 2
+Use        LaunchBase.exe -game ORIGINALFA2        for unmodded FinalAlert 2 YR.
+If subfolder has any spaces in the name then it should be enclosed in quotes like so:
+    LaunchBase.exe -game "Just another YR mod"
+
+-tx
+If this switch is used then the Terrain Expansion FinalAlert 2 mod will be launched automatically in conjunction with whatever other FinalAlert 2 mod you choose to launch, regardless of whether or not the 'Integrate Terrain Expansion' checkbox is ticked. You must actually have the Terrain Expansion FinalAlert 2 mod otherwise an error will occur.
+
+-nosplash
+This will disable the splash screen that appears while Launch Base is loading.
+Disabling the splash screen may cause Launch Base to load a few seconds more quickly on some systems.
+
+-dev
+This option is for authors only. If this switch is used then 'Developer Mode' will be enabled.
+Developer Mode has the following properties:
+'Persistent Mods' will be disabled, regardless of what the option is normally set to.
+'Recompile Mods' will be enabled, regardless of what the option is normally set to.
+'Verify Plugin Security Keys' will be disabled, regardless of what the option is normally set to.
+The right-click menus for plugins and FinalAlert 2 mods will include the 'Open Containing Folder' option. This option normally isn't included for plugins or FinalAlert 2 mods because they do not contain any user-generated content.

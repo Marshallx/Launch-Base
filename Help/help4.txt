@@ -1,0 +1,37 @@
+Important Warnings
+Please note that Launch Base, by itself, will not damage the state of your Red Alert 2 folder.
+Existing files are backed up, not overwritten, and they are restored again when the replacement files are no longer needed. However if you run any third party tools or launch a mod outside of Launch Base, then Launch Base has no control over what file operations will take place which could result in loss of files. This leads us to Rule One...
+
+The Number One Rule Of Using Launch Base:
+If you are going to launch mods outside of Launch Base, then turn off 'Persistent Mods' in Tools > Options (see Launch Base Options).
+The same applies to activating plugins outside of Launch Base - turn off 'Persistent Plugins' in Tools > Options.
+
+Interrupting Launch Base:
+Don't. Ever. If you have a security program that gives you the option of stopping Launch Base from performing any of its operations then you *must not* utilize that option.
+To emphasize this point, just because you don't know why Launch Base might be doing something (such as deleting a file) does not mean that Launch Base is behaving incorrectly.
+If Launch Base is prevented from carrying out any operation then this could cause accidental file deletions.
+NEVER terminate Launch Base (e.g. via Windows' Task Manager) - Launch Base performs important operations when closing which, if skipped, could result in major problems.
+If you have no choice but to terminate Launch Base then you should immediately run it again and close it properly before activating any other mods or plugins.
+
+Safety Space:
+First, read the description of the Safety Space option (see Launch Base Options).
+If you run out of disk space whilst a mod/plugin is being activated then Launch Base will crash. If Launch Base had previously saved a backup of any files that also exist in the failed mod/plugin then those backups could be lost, so always make sure you have enough disk space! If in doubt, set Safety Space to the maximum level.
+
+The Restore Process:
+This is one of the most important processes within Launch Base. As soon as Red Alert 2/Yuri's Revenge/FinalAlert 2 YR closes, this process will run. It is responsible for sorting out changes to a mod's save games, screenshots and scripted IPB videos, as well as deactivating the mod if 'Persistent Mods' is turned off (and restoring any residual mod files that were removed prior to launching the mod). If Launch Base is terminated unexpectedly before the restore process takes place (say, if you had a power cut while playing the game), then simply run Launch Base briefly and the restore process will complete automatically.
+
+Game Configuration:
+Launch Base will save and restore the game configuration (selected game mode, map index, player colour, AI players, etc) on a per-mod basis.
+When a mod is deactivated by Launch Base, the game configuration will be reset to a default configuration so as to prevent any errors or crashes should you run a non-Launch Base mod.
+This means that you should always use Launch Base to launch the game if you want to play the unmodded game - otherwise your game configuration will keep getting reset.
+
+Internet Cache:
+Some Launch Base operations require the downloading of files from the Internet (specifically the Broadcast Message, Mod Catalogue and Check For Updates facility).
+If the needed files are cached then newer versions may not be downloaded. This could, for example, make Launch Base think that it is up-to-date when in fact it is not.
+In order to prevent this, you should set the following in Windows:
+Control Panel > Internet Options > General > Temporary Internet Files > Settings > Check for newer versions of stored pages > Every visit to the page > OK > OK
+When Launch Base is installed or updated the installer will try to set this automatically.
+
+Screenshots:
+Screenshots are considered to be mod-specific and are moved from the Red Alert 2 directory into the root of the mod's directory. The screenshots are automatically renumbered to avoid accidental deletion. If you delete screenshot 3 of 5 from the mod's directory then future screenshots will still be numbered from 6 onwards. If you delete screenshot 5 of 5, then future screenshots will be numbered from 5 onwards.
+You can renumber/rename/delete screenshots as you see fit.
