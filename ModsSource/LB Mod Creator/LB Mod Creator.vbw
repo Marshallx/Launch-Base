@@ -1,0 +1,11 @@
+frmMain = 26, 19, 1601, 589, , 22, 2, 743, 659, C
+frmWait = 100, 111, 744, 540, C, 244, 44, 856, 473, C
+MarshallxStandardFunctions = 13, 42, 652, 564, C
+MarshallxYRFileCats = 22, 22, 661, 544, C
+MarshallxFileAssociation = 44, 58, 650, 514, C
+frmHelp = 81, 54, 720, 576, , 110, 110, 749, 632, C
+frmAbout = 96, 102, 735, 624, C, 132, 132, 771, 654, C
+frmFileErrors = 26, 27, 719, 549, C, 73, 90, 712, 612, C
+MD5Driver = 108, 29, 706, 485, C
+frmUninstallFiles = 40, 94, 652, 546, C, 55, 128, 502, 580, C
+LargeFileReadWrite = 0, 0, 0, 0, C

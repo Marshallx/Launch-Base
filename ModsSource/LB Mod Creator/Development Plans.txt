@@ -1,0 +1,25 @@
+============================================================
+To Do:
+***NEED TO ALPHABETISE InstFile() and InstFileNodeID() on SaveSettings
+***replace fso
+dcoder dll calls (including mix encryption stuff)
+'../md5.dll' ?
+ares.ini is not an allowed filename but LBMC lets people include it.
+
+Vista/64 problem: tabstl32.ocx not autodetecting or registering:
+It's working now! I copied the OCX file to "C:\Windows\SysWOW64" and used regsvr32 with Administrator privileges there and now it works!
+
+============================================================
+Future Development:
+0. Log Writer?
+1. Multi-language installers
+2. lbp file 32x32 icon is not being displayed correctly in windows
+3. side 1/2/3/4 mix files should be handled by SaveScript_MainFiles
+============================================================
+Error Handling (already implemented):
+Init
+SaveScript
+SaveSettings
+LoadSettings
+SaveLiblist
+menu_create_Click

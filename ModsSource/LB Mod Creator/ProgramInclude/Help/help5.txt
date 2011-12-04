@@ -1,0 +1,121 @@
+Update Check File
+On the Options tab you can specify a URL to an update check file.
+
+This file is used by Launch Base when it reads information for the Mod Catalogue or checks to see if an update is available for your mod.
+
+You don't have to provide an update check file for your mod but it is well worth it. However if you do provide one then you must make sure it is set up correctly.
+
+If you do not specify a URL, or the update check file cannot be downloaded for some reason, then Launch Base will not be able to display your mod in the Mod Catalogue/Updates facility.
+
+You must create and upload the update check file yourself.
+
+The file is an INI file consisting of two sections where you put all the settings that Launch Base needs in order to display your mod in the Mod Catalogue and allow users to download updates.
+
+The update check file should be uploaded in binary mode and can have any reasonable filename (eg. "mymod.upd").
+
+If you specify the URL to your update check file on the Options tab, then once a user has your mod they will be able to check for updates to it in the Launch Base Mod Catalogue/Updates facility. If you want your mod to show up in the Mod Catalogue list even if a user doesn't already have your mod, then you will need to contact us at the Launch Base website (see Help > About) and tell us the URL to your update check file.
+
+____________________________________________________________
+
+Here is an example of what the file should look like.
+
+[General]
+LatestVersion=1.0.2
+ChangeLogURL=http://www.website.com/mod/ChangeLog.txt
+Name=Just another YR mod
+Author=John Doe
+Website=http://www.website.com
+Description=Just another YR mod is great!
+Campaigns=Broken Campaigns
+Date=2015-10-21
+RPVersion=
+TXVersion=
+AllowTX=yes
+FA2Version=1.0.0.1
+IsForRA2=no
+ModType=mod
+Update0=1.0.1
+Update1=1.0
+
+[Downloads]
+FullMirror0=http://www.website.com/mod/ModSetup.exe
+FullMirror1=http://www.freebeer.org/hosted/ModSetup.exe
+Update0Mirror0=http://www.website.com/mod/ModUpdateFrom101.exe
+Update1Mirror0=http://www.website.com/mod/ModUpdateFrom100.exe
+
+____________________________________________________________
+
+Below is a description of each of the above flags.
+
+[General]
+
+LatestVersion=
+The current version of your mod as specified on the Options tab of LB Mod Creator.
+
+ChangeLogURL=
+The URL from which your mod's change log can be downloaded (optional).
+If this is not provided then the button to download the change log will be disabled.
+
+Name=
+Author=
+Website=
+Date=
+Description=
+Campains= (only applies to Mods)
+These flags should all be set the same as their counterparts on the Options tab of LBMC.
+
+RPVersion= (only applies to Mods)
+Should be the same version that you specified on the Options tab of LBMC if your mod requires the RockPatch.
+
+TXVersion= (only applies to Mods and FinalAlert 2 Mods)
+Should be the same version that you specified on the Options tab of LBMC if your mod requires the Terrain Expansion.
+
+AllowTX= (only applies to Mods and FinalAlert 2 Mods)
+Set to 'yes' if your mod can work with the Terrain Expansion or 'no' if the Terrain Expansion should not be permitted. Again, this setting should match your choice on the Options tab of LBMC.
+
+FA2Version= (only applies to FinalAlert 2 Mods)
+Should be the same version that you specified on the Options tab of LBMC if your FA2 mod requires a specific version of FinalAlert 2 YR.
+
+IsForRA2= (only applies to Mods)
+Set to 'yes' if your mod is for Red Alert 2. Again, this setting should match your choice on the Options tab of LBMC.
+
+ModType=
+One of either "mod", "fa2mod", "devtool", "usertool" or "plugin" (without the quotes).
+These correspond to "Mod", "FinalAlert 2 Mod", "Mod Developer Tool", "User Tool" and "Plugin" respectively from the 'Mod Type' drop down list on the Options tab.
+
+Update#=
+Represents a previous version of your mod for which an update-only installer is available.
+You can specify multiple older versions by including multiple Update#= flags, e.g.
+Update0=1.0
+Update1=1.2
+Update2=0.9
+Update3=1.1
+
+
+[Downloads]
+
+FullMirror#=
+A URL from which Launch Base can download the full installer for your mod.
+
+Update#Mirror#=
+A URL from which Launch Base can download an update-only installer for your mod (optional).
+The first # should match the corresponding Update#= flag from the General section, e.g.
+Update0Mirror0=http://www.website.com/mod/ModUpdateFrom1.0.exe
+Update1Mirror0=http://www.website.com/mod/ModUpdateFrom1.2.exe
+Update1Mirror1=http://www.freebeer.org/hosted/ModUpdateFrom1.2.exe
+
+If the user has the 'updateable' version of your mod then they will download the installer specified by one of these URLs. If the user has any other version, or the update-only installer is not specified, then the full installer will be downloaded.
+
+If a suitable download URL is not provided then the Launch Base Mod Catalogue will display the words "Visit website for download."
+
+Note that you can't just have an update-only installer, expecting users to download a previous full version and then an update - Launch Base does not support this. The FullMirrors must always link to the most up-to-date version.
+
+____________________________________________________________
+
+How Launch Base Handles Mirrors:
+
+Launch Base will count the number of mirrors in your update check file. If a mirror is skipped out (e.g. you specify Mirrors 0, 1 and 3) then all mirrors after the skipped number will be ignored (e.g. mirror 3 will never be used). Mirror counting begins at zero, not one.
+
+As a minimum, you must specify a URL against the flag "FullMirror0=" otherwise new users will be unable to download your mod through Launch Base.
+
+Once Launch Base has counted the number of mirrors it will pick a mirror at random to download from. If Launch Base cannot connect to the random mirror then it will try every mirror in sequence until either it successfully connects or it runs out of mirrors.

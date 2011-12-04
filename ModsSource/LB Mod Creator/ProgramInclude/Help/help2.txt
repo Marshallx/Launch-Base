@@ -1,0 +1,164 @@
+Files
+The Folder Tree:
+The list of folders are the folders that could potentially be created by your installer.
+If a folder does not contain any files then it will not be created.
+Click on a folder to display its contents in the window on the right.
+
+You can drag & drop files from Windows Explorer onto the appropriate folder in the tree in order to add the files to that folder. If you try to include a file that is not appropriate for that folder then it will be rejected. The 'View File Errors' button will be enabled if there are any rejections - click this button to see the list of rejected files and why they have been rejected.
+
+Only the files added on this tab are displayed on this tab. Files such as the banner image and mod display/launch sounds will not be displayed here, even though they are going to be installed.
+
+You can remove files from a folder by selecting that folder, highlighting the unwanted files in the window on the right, and then pressing the Delete key on your keyboard.
+You can highlight a single file by clicking on it.
+You can highlight multiple files by using the Ctrl and shift keys when clicking.
+
+WARNING:
+Launch Base will convert OGG files to WAV files when a mod is launched. The conversion takes place in a single directory.
+If you include two OGG files that share the same filename then one of them will not be included in the mod. Even if the files are in different category folders, all OGG files that you include MUST have unique filenames.
+
+____________________________________________________________
+
+What folder should I put my files in?
+The folders in the folder tree are almost identical to those in XCC Mod Creator.
+Four new categories have been added ('fa2files', 'side 4', 'syringe' and 'taunts') and one category has been removed ('launcher' - because this folder is used internally by Launch Base and is not applicable to LBMC installers). The folders work in the same way as in XCC Mod Creator except the 'video' category does not force MIX files into the 'mix' category.
+
+cameo - Cameos (build icons) in SHP format.
+
+fa2files - FAData.ini, FALanguage.ini and/or marble.mix. [only if you are creating a FinalAlert 2 mod]
+
+hva - HVA files.
+
+ini - INI files.
+
+interface - GUI elements such as buttons and country flags.
+
+manual - All the files that relate to your mods documentation. This should include a file named index.* in order for Launch Base to open your manual (e.g. index.html or index.txt).
+
+map - MAP, MPR and YRM files.
+
+mix - MIX files. These will be placed inside expandmd98.mix so do NOT include ecachemd##.mix or expandmd##.mix.
+
+screen - Menu backgrounds.
+
+shp - In-game 2D graphics in SHP format. Also mouse.sha.
+
+side 1 - These files will replace existing files inside sidec01.mix.
+Note that files in the side 1 folder will be distributed loose - Launch Base will create the final MIX file as neccessary. If you include a pre-compiled <sidec01.mix> file in this folder, then Launch Base will use this as a template instead of extracting the original sidec01.mix from ra2.mix.
+
+side 2 - These files will replace existing files inside sidec02.mix
+Note that files in the side 2 folder will be distributed loose - Launch Base will create the final MIX file as neccessary. If you include a pre-compiled sidec02.mix file in this folder, then Launch Base will use this as a template instead of extracting the original sidec02.mix from ra2.mix.
+
+side 3 - These files will replace existing files inside sidec02md.mix or be inserted into a new  sidec03.mix file, depending on what you set the 'Side 3 MIX File' option to.
+Note that files in the side 3 folder will be distributed loose - Launch Base will create the final MIX file as neccessary. If you include a pre-compiled sidec02md.mix file in this folder, then Launch Base will use this as a template instead of extracting the original sidec02md.mix from ra2md.mix.  If you include a pre-compiled sidec03.mix file in this folder, then Launch Base will use this as a template instead of creating a blank sidec03.mix file.
+
+side 4 - These files will be inserted into a new sidec04.mix file.
+Note that files in the side 4 folder will be distributed loose - Launch Base will create the final MIX file as neccessary. If you include a pre-compiled sidec04.mix file in this folder, then Launch Base will use this as a template instead of creating a blank sidec04.mix file.
+
+sound - New or replacement unit voices and sound effects in WAV, OGG or FLAC format, and/or any BAG and IDX files if you want to include pre-compiled audio bags.
+
+speech - New or replacement EVA sounds in WAV, OGG or FLAC format.
+
+string table - ra2md.csf if you are providing a complete replacement string table, or any CSF or TXT files if you are just including a partial string table update. There are three advantages of using partial string table updates:
+1. Smaller filesize.
+2. Doesn't overwrite unchanged strings so maintains a significant amount of the original language string table.
+3. Allows groups of strings to be split over several files.
+The format of the TXT partial string tables is the same as XCC Mod Creator:
+name:beag=Black Eagle
+Unlike XCC Mod Creator, however, Launch Base allows TXT string tables to include the text "$\n" to specify a new line, and "$\t" to specify a tab. For example:
+loadbrief:sov01md=A new mission$\nObjective 1:$\tKill stuff.$\nObjective 2:$\tKill more stuff.
+
+'syringe' - Launch Base supports the use of pd's Syringe program and the Ares DLL. Any additional DLL files used by your mod (or a replacement for the Ares DLL) should be placed in this category. Don't forget to include the corresponding INJ files too.
+Launch Base includes the latest version of Syringe and will automatically know to use it if you include any files in this category (or you have ticked the 'Use Official Ares DLL' checkbox (see below)).
+
+taunts - New or replacement taunts in WAV or OGG format.
+
+theme - New or replacement audio tracks in WAV or OGG format. Please check out the YR Playlist Manager via the Launch Base website for details on making your mods audio tracks compatible with the YR Playlist Manager.
+
+video - BIK files. Although you can actually place anything you want in the video category - anything placed here will be copied loose to the user's RA2 folder. If you have pre-compiled your own ecachemd##.mix or expandmd##.mix then place them here. Also creditsmd.txt.
+
+vxl - In-game pseudo-3D graphics in VXL format.
+
+____________________________________________________________
+
+Use Official Ares DLL:
+If your mod is making use of Syringe and Ares then you will probably want to use the latest version of the Ares DLL. Launch Base will automatically download this file and activate it with your mod if you have ticked this checkbox.
+If you intend to include your own version of the Ares DLL (e.g. a legacy version) then you should not tick this checkbox. Note that Launch Base only includes the latest version of Syringe - some legacy DLLs may not work with the latest version (such DLLs are not suitable for use with Launch Base).
+
+____________________________________________________________
+
+MIX files referred to below are <ecachemd98.mix> and <expandmd98.mix>.
+
+MIX File Format:
+None - Files will be installed 'as-is'. Launch Base will do the work of generating MIX files when the user activates the mod.
+Unprotected - Recommended. Launch Base Mod Creator will generate MIX files when your installer is compiled.
+LeechKiller - Same as Unprotected but uses the LeechKiller protection method (see below).
+MixScramble - Same as Unprotected but uses the MixScramble protection method (see below).
+
+The following explanation of MIX Protection is by DCoder, who developed the <.mix> file writing capability of this program and the 'MixScramble' method of protection.
+
+== MIX Protection Methods ==
+At the moment there are two methods of protecting your MIX files:
+  1. LeechKiller (developed in June 2005 by Saberhawk)
+  2. MixScramble (developed in November 2006 by DCoder)
+
+== Purpose ==
+They both make your MIX files unreadable by any XCC tools (or any third party tools that use the XCC mix-reading code (such as FinalAlert 2 YR - you should NOT use MIX Protection on FinalAlert 2 Mods)). The reasons for or against using these protection methods will not be discussed here. The exact methods of protection will not be disclosed here. The reason they work is because the game is more lenient with MIX file loading than XCC code is.
+
+== Caveats ==
+As said, these methods work because the game is more lenient with MIX file loading than XCC code is. Should the XCC code one day be updated to fully match the method used by the game itself, then neither method will protect MIX files successfully.
+The MIX format itself doesn't pack the file contents, therefore anyone with a hex editor can see the plain INI codes in the MIX files. It is certainly not impossible to determine the internal identifiers the graphics assets have, and from there it is short work to write custom INI code addressing those identifiers, distribute it with your (encrypted or not) MIX file, and have it work.
+
+____________________________________________________________
+
+View File Errors:
+If any of the files you have chosen to include are not allowed for some reason then this button will be enabled. Click the button for a list of invalid files and reasons why these files are not allowed.
+
+____________________________________________________________
+
+Include Program Directory:
+If you are releasing a tool then you will probably want to include custom folders. Enter the path to your tool's program directory and the installer will install the complete contents of that directory in the root of the installation directory.
+
+____________________________________________________________
+
+Include Custom Script:
+You shouldn't need to include your own custom script as Launch Base Mod Creator has been designed to perform all necessary tasks.
+
+However, if you need to set up some additional files on the end user's system then you can write your own custom NSIS script to achieve this.
+
+Specify the path to your script file in the 'Include Custom Script' text box. If the specified path exists then that script code will be executed immediately after the standard install tasks have been performed.
+
+Note that this custom script should only be used for setting up the files that Launch Base needs to handle your mod. The point in the installation procedure that this script is executed makes it unsuitable for anything else.
+Custom scripts cannot be used with update-only installers (see 'Compression').
+
+Please note that Launch Base Mod Creator will not validate your script so you may encounter an error when your installer is generated. If this happens then you can look at the <except.log> file (if one is generated by the error) to see whether the error lies in your script or in the code generated by Launch Base Mod Creator.
+
+Please be careful if including your own custom install script and test it thoroughly on your own system before releasing it, to make sure that there is no possibility of making unwanted file deletions or other unwanted changes to the end user's system.
+Installers that include a custom script will warn the end user of this and give them the option not to execute it. You can use the 'Custom Script Warning' text box to add your own message to this warning.
+
+To learn the syntax for the NSIS scripting language visit http://nsis.sourceforge.net
+This version of Launch Base Mod Creator uses NSIS 2.17.
+
+The following variables are available for you to refer to in your script. They should NOT be overwritten as they may be referred to by the installer after your script has run.
+$LBDIR = Install path of Launch Base. Use this only to refer to "$LBDIR\LaunchBase.ini" or "$LBDIR\dcoder.dll". Do not use $LBDIR as a temporary workspace.
+$INSTDIR = Install path of the mod (e.g. "$LBDIR\Mods\some folder")
+$MODNAME = Your mod's name as it appears on the Options tab of LBMC.
+$UNINSTALLCOUNT = The number of the last file that was written to the [Uninstall] section of <liblist.gam>
+
+Your custom script can call additional custom functions, and should be written as follows:
+;start of script
+Function funcCustomScript
+  [instructions]
+  Call funcSecondary
+  [instructions]
+Function End
+Function funcSecondary
+  [instructions]
+Function End
+;end of script
+
+If your script creates new files that Launch Base Mod Creator does not know about then your script will need to amend "$INSTDIR\launcher\liblist.gam" so that the [Uninstall] section is correct. Make sure you thoroughly test the 'right-click > Delete Mod' option in Launch Base to make sure you have updated this section correctly.
+
+The included example script, <example.nsi>, is used by the Launch Base Mod Creator installer. It has three lines of code. The first line copies Launch Base's <md5.dll> file to the Launch Base Mod Creator directory so that Launch Base Mod Creator can use that, rather than including it's own copy of the file.
+The second line increments the $UNINSTALLCOUNT variable so that we know which number to write to the [Uninstall] section of <liblist.gam>.
+The third line writes "md5.dll" to the [Uninstall] section of <liblist.gam>, so that Launch Base knows it should remove this file.
+The three lines are repeated a further three times for three other files that Launch Base Mod Creator needs from Launch Base.

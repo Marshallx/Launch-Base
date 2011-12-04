@@ -1,0 +1,123 @@
+Launch Base Mod Creator
+Change Log
+
+Version 0.99.111 [2010-06-29]
+Changed Automatic Version to set a version number based on the current year, month, day, hour and minute at the time the installer was created. You'll need to check the liblist.gam file produced by the installer to see the version number that was generated.
+side*.mix files are no longer rejected in mods (indices other than 1 or 2 used to be rejected, but Ares permits more than this).
+
+Version 0.99.109 [2010-01-03]
+Fixed bug where installers could not be created if an information page was included.
+Assault Map Packs permitted in internal plugins.
+Fixed bug with plugin security.lock generation that would result in returned security.keys being invalid.
+
+Version 0.99.108 [2009-12-24]
+FLAC files are now permitted wherever OGG files are permitted. An upcoming version of Launch Base will be capable of converting FLAC to WAV.
+Added option to convert WAV files to FLAC automatically before adding them to generated installers. This option is on the Compression tab.
+
+Version 0.99.107 [2009-08-06]
+Fixed bug that caused files intended for the root folder to be installed to a bizarre folder named "Node0".
+Fixed crash that could occur when saving an LBP file.
+
+Version 0.99.106 [2009-06-01]
+Ampersands are now permitted in file paths.
+Significantly improved the performance and disk requirements of the installer generation process.
+Fixed bug with folder tree where dragging off the tree window would cause the selected folder to jump to the base folder.
+Please note that there have been a lot of code changes in this version of LBMC - test your installers thoroughly.
+
+Version 0.99.105 [2008-08-23]
+Fixed bug where double-clicking an LBP file would load LB Mod Creator but wouldn't load the LBP file.
+
+Version 0.99.104 [2008-08-21]
+Added validation to prevent wholly numeric Plugin IDs being entered.
+Added new option for mods on Files tab - 'Use Official Ares DLL'. This is in anticipation of the release of Ares and is presently ignored by Launch Base.
+Fixed bug where file size displays on the Files tab could be corrupted. These also now use the user's regional settings to determine the thousand digit separator.
+
+Version 0.99.103 [2008-06-27]
+'rockpatch' category only allows DLL and INJ files.
+'rockpatch' category renamed to 'syringe'.
+Fixed bug where you could intermittently create an installer when there were still file errors outstanding.
+RockPatch options removed (in-line with Launch Base changes).
+Added Size column to files list.
+Updated help topics.
+
+Version 0.99.102 [2008-05-23]
+Added 'Uninstall Files List' so that tool authors can add a list of files that their program might generate while running.
+Added 'rockpatch' category for mods to include any needed RP2/Syringe files. Note that this category is presently not support by Launch Base but will be soon, however the category name may change once the RP2 name is finalised.
+
+Version 0.99.101 [2008-05-08]
+Replaced MD5 routines to match those used by Launch Base.
+Added ellipsis buttons for Include Program Directory and Include Custom Script so that you can use open dialogs to browse for the directory/file.
+Added Custom Script Warning text box - you can now include your own comment when the installer warns the user that a custom script will be executed.
+Added a new variable for custom scripts: $UNINSTALLCOUNT, which contains the last uninstall file number.
+Included example custom script <example.nsi> and an explanation of it in the Help Topics.
+Fixed bug that caused the Uninstall section to be generated incorrectly for Tools such that Launch Base wouldn't detect the files to uninstall.
+Fixed bug that would prevent any EXE files from an Included Program Directory being added to the Program dropdown list.
+Fixed crash that would occur if you Included a Program Directory that contained more files than you had added to the Files tree.
+Enabled custom script for Tools.
+
+Version 0.99.100 [2008-03-08]
+Changes to support Launch Base's new method of handling plugins, including new 'Plugin ID' combo box.
+Fixed bug where closing LB Mod creator with the Help Topics open would cause LB Mod Creator to restart.
+Updated help topics.
+
+Version 0.99.0012 [2008-02-03]
+Added new control for Tools 'Close Launch Base'. This will make Launch Base shut down before launching your program.
+
+Version 0.99.0011 [2008-01-26]
+Can now specify default game mode and map index on Options tab.
+Added 'Reset Game Configuration' checkbox to Installer tab (see help for details).
+Fixed bug where clicking the 'X' of the About window would not unlock the main LBMC window.
+Fixed bug where update-only installers would always generate patches even if 'Generate Patches' was turned off.
+When overwriting an existing mod directory (that isn't the same mod as we are installing), installers will now completely delete that directory first. Warning messages have been updated appropriately.
+Updated help files.
+
+Version 0.99.0010 [2007-11-10]
+Can now customise Information Page title and back button caption.
+Moved file errors text box to a separate resizable form.
+Can now include a custom install script that will run after the main install tasks (see Help Topics for details). I will be including an example script once I have written it.
+Updated help files.
+
+Version 0.99.0009 [2007-11-09]
+Updated help files with details about the new format of update check files.
+
+Version 0.99.0008 [2007-11-08]
+Fixed bug where a TX installer would fail to compile if file patching was turned off.
+Updated help files with details about the new format of update check files.
+
+Version 0.99.0007 [2007-11-03]
+Installers will now make sure that Launch Base or other installers are not running.
+Banner image will now be extracted as <banner.*> regardless of the original filename.
+Updated help files.
+
+Version 0.99.0006 [2007-10-13]
+New method for reading file checksums which should work for users where the old method didn't.
+
+Version 0.99.0005 [2007-10-12]
+Fixed bug where security.lock files (for plugins) would not be generated correctly.
+
+Version 0.99.0004 [2007-10-11]
+Fixed bug where LB Mod creator thought all files dropped onto the Files tab were actually directories.
+Fixed bug where <.bag> and <.idx> files could not be dropped onto the sounds folder on the Files tab.
+Fixed bug where <mouse.sha> could not be dropped onto the shp folder on the Files tab.
+Redesigned files list on Files tab.
+
+Version 0.99.0003 [2007-10-07]
+Launch Base will no longer error when trying to launch LB Mod Creator.
+Program combo box will only allow <.exe> files now.
+Fixed potential crash if a mod had many files.
+Fixed potential crashes if user entered an invalid directory path in various text boxes.
+
+Version 0.99.0002.1 [2007-10-02]
+Included TABCTL32.OCX in installer. This will be installed to the LB Mod Creator folder and should not require registering.
+
+Version 0.99.0002 [2007-09-30]
+When loading an <.lbp>, the version number would be set based on today's date, even if the Automatic version checkbox was not ticked.
+Removed 'Catalogue Mod' checkbox, as this feature no longer exists in Launch Base.
+Installers no longer generate an uninstall program.
+The generated <liblist.gam> file now contains the uninstall information that Launch Base needs to remove mods.
+When creating your installer, any reserved files/folders in the 'Include Program Directory' will not be included, and a warning message will be displayed.
+Added icons to all message boxes.
+Minor updates to help files.
+
+Version 0.99 [2007-09-24]
+Initial beta-test release.

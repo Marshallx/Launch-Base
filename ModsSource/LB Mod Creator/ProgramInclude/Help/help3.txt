@@ -1,0 +1,59 @@
+Installer
+Installer Icon:
+Click on the icon to display an 'open file' dialog that will allow you to choose an icon file for your installer. When your installer is created this icon will be embedded in the installer (the icon will not be installed to the end user's machine).
+
+Window Icon:
+If checked, then the Installer Icon will be displayed in its large format inside the main installer window.
+
+Installation Directory:
+The textbox determines the default Launch Base 'Mods' subfolder that your mod will be installed to if the user does not change it.
+The dropdown list determines when to display a directory selection page.
+If you have completely disabled the directory selection page, and the default subfolder already exists and does not contain a mod with the exact same name as the one to be installed, then the user will be alerted and asked whether or not they want to overwrite it.
+If you are using the option of 'only show directory selection page if default folder not available', then instead of asking the user if they want to overwrite the folder (as above), they will be presented with the directory selection page.
+
+Close Installer Automatically:
+If this checkbox is ticked then, when installation is complete, the installer will automatically close and ask the user if they wish to run Launch Base.
+If the checkbox is not ticked, then the user will be able to review the log window before clicking 'Close' themselves, at which point they will be asked if they wish to run Launch Base.
+
+XP Style:
+Sets whether or not an XP manifest will be added to the installer. An XP manifest makes the installer controls use the new XP style when running on Windows XP.
+
+Move 'saves' to 'saves\old':
+With this option enabled, if the installation directory contains a 'saves' directory, then its contents will be moved to 'saves\old'. This is to prevent saves from older versions of your mod being made available in the current version, as save games are not compatible between different mod versions and can cause errors.
+
+Reset Game Configuration:
+Launch Base saves and restores the game configuration (selected game mode, map index, player colour, AI players, etc) on a per-mod basis. If the latest version of your mod changes anything that may make the users' selected settings invalid then you should tick this checkbox.
+For example, the first time a mod is played, Launch Base will automatically clear all AI players from the roster. However, if your mod is subsequently updated and the available game modes change, then there is the possibility that AI players could remain in the roster for a game mode where they are not allowed - this has the potential to crash the game. By ticking 'Reset Game Configuration', Launch Base will once again clear the AI players from the roster (as well as resetting the game mode and map index to the defaults that you specified on the Options tab).
+
+Show Log Window:
+While your install program is running, a log window will tell the user what the program is doing and what it has recently done.
+The checkbox determines whether or not this log window will be displayed on the Installation Progress page.
+
+Log Window Colors:
+The Log Window Colors settings determine what colors the log window will be.
+The values for Red, Green and Blue are hexadecimal pairs.
+Each pair should consist of two characters in the range 0-9 or A-F.
+In general, the two characters in a given pair should be the same. As such, when you type a character into an Install Colors box it will be duplicated automatically. If you have a good reason to have unlike character pairs then you must paste (Ctrl+V) the pair into the box.
+A Red value of 00 means "0% red".
+A Red value of FF means "100% red".
+Example hex values:
+      00  00  00  = black
+      FF  00  00  = red
+      00  FF  00  = green
+      00  00  FF  = blue
+      FF  FF  FF  = white
+      00  FF  FF  = cyan
+      FF  00  FF  = magenta
+      FF  FF  00  = yellow
+Make sure you make the log window easy to read by using one light color and one dark color.
+Some effective color schemes include 'black on white', 'white on black' or 'green on black'.
+
+Information/License Page:
+When the installer runs, the first thing the user sees is the Information page.
+You can choose to skip the Information page (the user can click a button to go back to it) or you can disable the Information page altogether if you prefer.
+The Information page 'Text:' textbox contains all the text that will appear on the information page (if you have one).
+Website URLs are automatically turned into hyperlinks (however E-Mail addresses are not).
+Use this page for whatever purpose you want (mod introduction, warnings, license agreement, credits, etc).
+The titlebar for the information page will read "Mod Name: [Title]", where [Title] is the text from the 'Title:' textbox.
+The 'Back Button:' textbox contains the caption that will be shown on the button that takes th user back to the Information page.
+If you want to insert a tab in the text, either paste it from the clipboard or type in "$\t" (without the quotes). When you save and re-load the Launch Base project file, all occurrences of "$\t" will be converted to tabs (and all occurrences of "$\n" will be converted to new lines).

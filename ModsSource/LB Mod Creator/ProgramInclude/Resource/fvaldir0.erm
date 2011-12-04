@@ -1,0 +1,16 @@
+;never show DSP
+Function .preCheckInstdir
+IfFileExists $INSTDIR 0 AcceptDir
+    IfFileExists "$INSTDIR\launcher\liblist.gam" +2 0
+        MessageBox MB_YESNO|MB_ICONQUESTION "The designated installation directory ($INSTDIR) already exists!$\nIt does not appear to contain a Launch Base mod.$\n$\nDo you wish to delete/overwrite this directory? (not recommended)" IDYES OverwriteDir IDNO TryDifDir
+        ReadINIStr $R9 "$INSTDIR\launcher\liblist.gam" "General" "Name"
+        StrCmpS $R9 $MODNAME AcceptDir 0
+        MessageBox MB_YESNO|MB_ICONQUESTION `The designated installation directory ($INSTDIR) already exists!$\nIt appears to contain a mod named "$R9".$\n$\nDo you wish to delete/overwrite this directory? (not recommended)` IDYES OverwriteDir IDNO TryDifDir
+TryDifDir:
+MessageBox MB_OK|MB_ICONSTOP "Installation aborted."
+Quit
+OverwriteDir:
+StrCpy $OVERWRITE "TRUE"
+AcceptDir:
+Abort
+FunctionEnd

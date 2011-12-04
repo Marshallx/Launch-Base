@@ -1,0 +1,85 @@
+Options
+Banner Image:
+Click on the Banner to display an 'open' dialog to select a suitable banner image for Launch Base to display when your mod is selected.
+The banner must be a BMP, JPEG or non-animated GIF file. The banner is 265x49 pixels.
+
+Mod Name:
+This will appear in the titlebar of your installer as well as in various messages, etc.
+It is also the name used by Launch Base in the mod list and mod details display.
+Mod Name should not change from version to version unless absolutely neccessary - the Launch Base Mod Catalogue will detect if a mod is already installed based on its name, and your installer will also use the mod name to detect if you are overwriting an existing version of the mod as opposed to a different mod.
+
+Author:
+Your name, the names of your team members, or your team name.
+
+Version:
+The version of your mod as displayed to the user.
+This is also used internally by Launch Base to establish whether or not an update is available.
+Can contain any number (integers and floating points).
+Please note the following rules if making use of the Launch Base 'Check For Updates' facility.
+1.08 = 1.8
+1.80 > 1.8
+1.8.0 = 1.8
+You can have any number of branches (for example, 1.8.2.4.3.6.4357.4574.6.34 is perfectly valid).
+If you tick the 'Automatic' checkbox then the Version number will be generated automatically based on the mod date.
+Version can be left blank.
+
+Date:
+Any appropriate date. I recommend using the release date of this particular version of the mod.
+If you tick the 'Automatic' checkbox then the date will be set to today's date.
+
+Description:
+The description of your mod. Should be short enough to fit within the text box and cannot contain any carriage returns (new lines).
+
+Website url:
+URL to the mod's website. Leave this blank if you don't have a website. Launch Base displays a hyperlink for this url so it should be valid and the website should actually exist.
+
+Update url:
+If you want Launch Base to be able to check for updates for this mod then you need to specify the URL of the update control file.
+The update control file is an ini file. The structure of this file is covered later. If left blank then Launch Base will not check for updates for this mod.
+
+Campaigns:
+This is just another description field so can be any text, although I recommend sticking to one of the entries from the dropdown list. It is supposed to indicate to Launch Base users the type of campaign support your mod has.
+
+Mod Type:
+This tells Launch Base which list to put the mod in. Some Launch Base Mod Creator settings only apply to specific Mod Types, so this is one of the first settings you should fill in.
+
+Red Alert 2:
+Tick this checkbox if your mod or plugin is for Red Alert 2 as opposed to Yuri's Revenge. This will let Launch Base know that it should launch Red Alert 2 and not Yuri's Revenge, and will also make sure that the correct filenames are used for the various mod files.
+
+Close Launch Base:
+Tick this checkbox if your tool needs Launch Base to shut itself down before launching your program. In most cases this should not be neccessary so think carefully before you tick this checkbox. An example of where this was used in the past was gordon-creAtive's RPMI tool, which needed Launch Base to be restarted in order to pick up newly installed versions of the RockPatch which were provided by the tool. However, the RPMI tool is now obsolete.
+
+Program:
+If you are releasing a tool then you need to specify which program Launch Base should run when the user chooses to launch your tool. The dropdown list contains a list of all the files you have added to the root folder on the Files tab (or files in the root of the Included Program Directory [see 'Files']) - you must select one of these programs.
+
+Optional Parameters:
+If you are releasing a tool then you may want the users to be able to use command line arguments with your program. By enabling 'Optional Parameters', the users will be able to enter such arguments into a text box on the Tools tab in Launch Base.
+
+SCRN Format:
+The RockPatch allows mod authors to customise the filename format used by Yuri's Revenge when saving screenshots. If you are using this feature in your mod, then you MUST enter into this text box the string value you have used in <rulesmd.ini> for the ScreenshotFileName= flag. If you are not using this feature then you must leave the default format of "SCRN%04d.PCX".
+
+Display Sound/Launch Sound:
+Enter the full path of a WAV, OGG or FLAC file on your computer. The Display Sound will be played when a user selects your mod in Launch Base. The Launch Sound will be played when the user chooses to launch your mod.
+Click on the speaker icon to test the sound.
+
+Terrain Expansion:
+Use the radio buttons to choose whether or not the Terrain Expansion is required to run your mod, or if it should specifically not be allowed (say, because you have your own built-in Terrain modifications).
+Use the Minimum Version text box to enter the minimum version of the Terrain Expansion that is required (you can get the appropriate version number from the Terrain Expansion documentation).
+
+FinalAlert 2 YR:
+If your mod is a FinalAlert 2 YR mod and not a Yuri's Revenge game mod then you may require a specific version of FinalAlert 2 YR. If you require a specific version then select it from the drop-down list.
+
+Default Mode/Map:
+Launch Base remembers the selected game mode and map index for each mod. If your mod hasn't been played before then Launch Base will set the game mode and map index to the values you specify here.
+If you add <mpmodes(md).ini> to the ini folder on the Files tab then the Game Mode text box will be replaced with a drop-down list of the game modes that are available in your mod.
+When considering changing the default values you should be aware of the following:
+    Minimum value for Game Mode is 1. Mode one is the first mode.
+    Minimum value for Map Index is 0. Map zero is the first map.
+    The default map index must exist in the users' game and it must be compatible with the default game mode. If it isn't, then the game will crash.
+
+Plugin Security:
+If you are not releasing a Plugin then don't bother reading this - you can just ignore the Plugin Security settings. If, however, you are releasing a new plugin, then this needs to be approved by the Yuri's Revenge community leaders to make sure it will not conflict with any existing plugins. Further more, if you are releasing a plugin then you don't want anyone hijacking it and releasing an unauthorized version.
+When you are ready to release the plugin you will need to click on the "Export security.lock" button. This will create a special security file named <security.lock>. This file uniquely identifies this particular version of the plugin's files and settings. You will need to submit this file to us at the Launch Base website (see Help > About). We will then validate your plugin settings and generate a <security.key> file for you.
+When you have received the <security.key> file you should include it by clicking on the "Import security.key" button. Do not change any other settings after submitting your <security.lock> file, otherwise the <security.key> will not be valid.
+If a plugin with an invalid <security.key> file is installed then Launch Base will refuse to activate the plugin. However, you can test an unverified plugin using Launch Base' dev mode.
+If you have any questions about the Plugin Security system or creating a new plugin then please contact us at the address shown on the 'About' window.

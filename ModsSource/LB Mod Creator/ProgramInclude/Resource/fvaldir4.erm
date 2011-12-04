@@ -1,0 +1,25 @@
+;update-only installer, show dsp
+Function .validateInstdir
+StrCpy $R2 $INSTDIR "" -1
+StrCmp $R2 "\" 0 +2
+StrCpy $INSTDIR $INSTDIR -1
+GetFullPathName /SHORT $R1 "$LBDIR\LaunchBase.ini"
+GetFullPathName /SHORT $R2 "$INSTDIR\..\..\LaunchBase.ini"
+StrCmp $R1 $R2 0 NotInLB
+;Now the format is valid, we need to check whether or not we are overwriting something, etc.
+IfFileExists $INSTDIR +2 0
+MessageBox MB_OK|MB_ICONSTOP "The folder path you specified does not exist!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK TryDifDir
+IfFileExists "$INSTDIR\launcher\liblist.gam" +2 0
+MessageBox MB_OK|MB_ICONSTOP "The folder path you specified does not contain $PREVNAME!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK TryDifDir
+ReadINIStr $R9 "$INSTDIR\launcher\liblist.gam" "General" "Name"
+StrCmpS $R9 $PREVNAME +2 0 
+MessageBox MB_OK|MB_ICONSTOP "The folder path you specified does not contain $PREVNAME!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK TryDifDir
+ReadINIStr $R9 "$INSTDIR\launcher\liblist.gam" "General" "Version"
+StrCmpS $R9 $PREVVERS AcceptDir 0 
+MessageBox MB_OK|MB_ICONSTOP "The folder path you specified does not contain $PREVNAME version $PREVVERS!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK TryDifDir
+NotInLB:
+MessageBox MB_OK|MB_ICONINFORMATION `The folder path you specified is not valid.$\n"$MODNAME" must be installed to a subfolder of the Launch Base 'Mods' directory.$\nExample: "$LBDIR\Mods\NewMod".`
+TryDifDir:
+Abort
+AcceptDir:
+FunctionEnd

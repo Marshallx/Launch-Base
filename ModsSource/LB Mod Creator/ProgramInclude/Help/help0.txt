@@ -1,0 +1,15 @@
+File Menu
+Open/Save/Save As:
+Standard Windows dialogs allow you to open and save LBP files, making it possible for you to maintain multiple Launch Base Mod Creator projects.
+Please note that you will not be prompted to save any changes if you choose to open another project.
+
+Create Installer:
+This option will create your installer. You will be presented with a 'save as' dialog so you can specify where you want your installer to be saved.
+Be aware that creating your installer may take several minutes.
+
+Recently Used Files List:
+The most recently saved/opened files are listed on the File menu for quick access. Select one of these files to quick-load it.
+Please note that you will not be prompted to save any changes if you choose to quick-load another project.
+
+Exit:
+When you exit the program the currently loaded settings will be saved in a file called "Recent.lbp". Please note that any other open LBP file will not be saved and you will not be prompted to save any changes when you choose to exit the program.

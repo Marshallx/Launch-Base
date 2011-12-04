@@ -1,0 +1,10 @@
+;don't show DSP if default folder is available
+Function .preCheckInstdir
+IfFileExists $INSTDIR 0 AcceptDir
+    IfFileExists "$INSTDIR\launcher\liblist.gam" 0 TryDifDir
+        ReadINIStr $R9 "$INSTDIR\liblist.gam" "General" "Name"
+        StrCmpS $R9 $MODNAME AcceptDir TryDifDir
+AcceptDir:
+Abort
+TryDifDir:
+FunctionEnd

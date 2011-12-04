@@ -1,0 +1,12 @@
+[General]
+LatestVersion=0.99.112
+ChangeLogURL=http://marshall.strategy-x.com/LaunchBase/LBMC_ChangeLog.txt
+Name=Launch Base Mod Creator
+Author=Marshall
+Date=2010-09-11
+Description=This program will help you to package your own mod into a feature-rich executable installer that will allow users to easily integrate your mod into Launch Base.
+ModType=modtool
+Website=http://marshall.strategy-x.com/LaunchBase
+
+[Downloads]
+FullMirror0=http://marshall.strategy-x.com/LaunchBase/LBMC_Setup.exe

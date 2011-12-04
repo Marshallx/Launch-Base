@@ -1,0 +1,8 @@
+Miscellaneous
+Releasing Your Mod:
+Before you release your mod publicly you should, of course, thoroughly test it to make sure that there are no problems. The same applies to your installer.
+There are so many variations of installer that can be created with this program that it would be impossible for us to test them all so you should thoroughly test your installer before releasing it publicly.
+
+Feedback/Troubleshooting:
+Please send us any feedback (positive or negative) that you care to.
+If you find a bug or are encountering some problem with the program, first check for updates to the Launch Base Mod Creator. If you are still encountering a bug after updating then contact us at the Launch Base website (see Help > About) and we'll try to sort it out.

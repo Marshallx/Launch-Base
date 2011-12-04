@@ -1,0 +1,18 @@
+;update only installer, never show DSP
+Function .preCheckInstdir
+IfFileExists $INSTDIR +2 0
+MessageBox MB_OK|MB_ICONSTOP "The designated installation directory does not exist!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK RejectDir
+IfFileExists "$INSTDIR\launcher\liblist.gam" +2 0
+MessageBox MB_OK|MB_ICONSTOP "The designated installation directory does not contain $PREVNAME!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK RejectDir
+ReadINIStr $R9 "$INSTDIR\launcher\liblist.gam" "General" "Name"
+StrCmpS $R9 $PREVNAME +2 0 
+MessageBox MB_OK|MB_ICONSTOP "The designated installation directory does not contain $PREVNAME!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK RejectDir
+ReadINIStr $R9 "$INSTDIR\launcher\liblist.gam" "General" "Version"
+StrCmpS $R9 $PREVVERS AcceptDir 0 
+MessageBox MB_OK|MB_ICONSTOP "The designated installation directory does not contain $PREVNAME version $PREVVERS!$\nThis update installer requires $PREVNAME version $PREVVERS." IDOK RejectDir
+RejectDir:
+MessageBox MB_OK|MB_ICONSTOP "Installation aborted."
+Quit
+AcceptDir:
+Abort
+FunctionEnd

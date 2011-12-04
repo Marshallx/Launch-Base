@@ -1,0 +1,68 @@
+[LBP]
+LBMCVersion=0.99.0006
+LBPVersion=3
+[Options]
+ModName=Launch Base Mod Creator
+ModAuthor=Marshall
+ModVersion=0.99.112
+ModVersionBox=0
+ModDateBox=1
+ModDateYear=2010
+ModDateMonth=09
+ModDateDay=11
+ModDescription=This program will help you to package your own mod into a feature-rich executable installer that will allow users to easily integrate your mod into Launch Base.
+ModCampaigns=Broken Campaigns
+ModType=2
+ModWebsite=http://marshall.strategy-x.com/LaunchBase
+ModUpdateCheck=http://marshall.strategy-x.com/LaunchBase/lbmc.upd
+ModScrnFormat=SCRN%04d.pcx
+ModSnapFormat=SNAP%04d.map
+IsForRA2=0
+ShutdownLB=0
+TXOpt=0
+FA2Opt=0
+ProgramText=LB Mod Creator.exe
+Params=0
+GameMode=1
+MapIndex=0
+[Files]
+0=E:\Development\RA2YR\LaunchBase\Mods\Dev_LB Mod Creator\LB Mod Creator.exe
+MixEncrypt=0
+Side3Mix=0
+ProgramDirectory=E:\Development\RA2YR\LaunchBase\Mods\Dev_LB Mod Creator\ProgramInclude
+CustomScript=E:\Development\RA2YR\LaunchBase\Mods\Dev_LB Mod Creator\example.nsi
+CustomScriptMessage=The script will copy some files from the Launch Base program directory. LB Mod Creator may crash if these files are not copied.
+UseAres=False
+[FileNodeIDs]
+0=Node0
+[Installer]
+InstallerIcon=E:\Development\RA2YR\LaunchBase\Mods\Dev_LB Mod Creator\Resource\LaunchBase.ico
+WindowIcon=1
+OldSaves=0
+ResetGameConfig=0
+CRC=1
+Instdir=LB Mod Creator
+DSP=1
+ShowInfoPage=0
+InfoPageTitle=Information
+InfoPageButton=Information
+ShowInstDetails=0
+AutoClose=1
+XPStyle=1
+TextColour0=00
+BGColour0=FF
+TextColour1=00
+BGColour1=FF
+TextColour2=00
+BGColour2=FF
+[InfoPageText]
+LastLine=0
+0=
+[Compression]
+CompressionMethod=3
+Solid=1
+GenPat=1
+FLAC=1
+PatchMinSize=16
+PatchBlockSize=2
+UpdateOnly=0

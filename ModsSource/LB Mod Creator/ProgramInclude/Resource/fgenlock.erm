@@ -1,0 +1,13 @@
+SetCompressor /solid lzma
+CRCCheck on
+Outfile "security.lock"
+Page instfiles
+AutoCloseWindow true
+
+Section "-main"
+  SetOutPath $EXEDIR
+  File "authlock.erm"
+  File "authlock.lbp"
+SectionEnd
+
+

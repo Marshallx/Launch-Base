@@ -1,0 +1,46 @@
+Compression
+Compression Method:
+Three compression methods are available (four if you count 'No Compression'). These compression methods will vary in effectiveness, depending on the data being compressed. In general, you should find that LZMA offers the best compression.
+
+Solid:
+If ticked, the install data will be compressed as a single item. If unticked, each file will be compressed separately. Solid compression is generally more effective.
+
+Generate Patches When Possible:
+If you are including <marble.mix> in your mod (see below) or you are creating an update-only installer (see below), then the installer may be able to include some file patches rather than including completely new files. This can significantly reduce the size of the installer.
+It is strongly recommended that you leave this option on.
+
+Convert WAV files to FLAC:
+If ticked, any WAV files included in your mod (except for any added to the manual category) will be added to the installer as FLAC files. FLAC is a lossless audio compression format which means it reduces the size of the WAV files without losing any of the quality. When Launch Base comes across the FLAC files it will convert them back to WAV files automatically.
+FLAC is strongly recommended and you may find it is even more effective than OGG in reducing the size of your mod's audio data (because most sounds you include will probably be unit voices).
+
+Unmodified <marble.mix>:
+If you are creating a FinalAlert 2 mod then there is a very remote possibility that you want to include a modified <marble.mix> file.
+In the unlikely event that you do, the installer can include a patch to convert the user's unmodified <marble.mix> into your modified one.
+In order to create the patch, you need to tell LB Mod Creator where it can find an unmodified <marble.mix> for comparison.
+The installer will NOT include a patch for <marble.mix> if you are creating an update-only installer (see below) and the previous installation did not include <marble.mix> in the first place - in this case the complete <marble.mix> will be included.
+
+Minimum File Size Before Patch:
+When considering whether or not a file can be patched, LB Mod Creator will check the size of the file. You may prefer to just include the complete new file if an update file is quite small, because patching a file can sometimes take longer than just extracting the whole file. This slider allows you to set the minimum size an updated file must be before LB Mod Creator will generate a patch for it. Updated files that are smaller than this will simply be include a-new.
+
+Patch Block Size:
+A lower block size can sometimes produce smaller patches but will also increase memory usage and decrease the speed of the installer.
+A block size of 64 is the recommended default.
+
+____________________________________________________________
+
+Update-only Installer:
+Update-only installers simply convert an existing, older installation of a mod into the latest version.
+
+First, install a clean copy of the old mod. Then install a clean copy of the new mod in a different directory.
+Finally, tell LB Mod Creator where it can find each of these clean installations so that it can compare them and calculate the update procedure. In the 'Previous Installation' and 'Latest Installation' text boxes you should specify the path to the mod's <liblist.gam> file (which you can find in the mod's "launcher" folder).
+
+When creating an update-only installer, several settings in the Launch Base Mod Creator project are ignored. The only settings that apply are:
+All settings on the Installer tab.
+All settings on the Compression tab, except for 'Unmodified <marble.mix>'.
+'Mod Name' on the Options tab (this is used in the titlebar and messages from the installer).
+
+Update-only installers can only upgrade one version of a mod to another. You can, of course, release multiple update installers, however the Launch Base auto-update facility will only allow for one update-only installer per update check file.
+
+The Launch Base auto-update facility allows you to specify one update-only installer and one full installer.
+If the user has the 'updateable' version of the mod then the update-only installer will be downloaded.
+If the user has any other version, or the update-only installer is not specified, then the full installer will be downloaded.

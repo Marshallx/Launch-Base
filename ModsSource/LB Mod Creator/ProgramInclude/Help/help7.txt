@@ -1,0 +1,24 @@
+TX-Gen
+This help page is for the authors of the Terrain Expansion plugin. If you are not a member of the Terrain Expansion team then you needn't read this page.
+
+The Terrain Expansion will be installed to a single subfolder within the Launch Base 'Mods' directory, even though it is including the Terrain Expansion FinalAlert 2 mod (the TX FA2 Mod is an "overlay" that is applied to normal FA2 Mods).
+Launch Base Mod Creator will generate a single installer for this.
+
+Note that the installer will not work if the user does not have Launch Base - the installer is for Launch Base users only (as with all installers created by this program).
+
+Below is a step-by-step guide to setting up Launch Base Mod Creator for the Terrain Expansion installer.
+
+1. Input the settings as for a normal plugin. The Mod Type should be set to 'plugin'.
+
+2. Select 'Plugin *is* TX' from the Terrain Expansion frame on the Options tab.
+
+3. On the Files tab, place the FinalAlert 2 files in the fa2files category as with a normal FinalAlert 2 mod.
+In addition, place any non-fa2files that are part of the Terrain Expansion FinalAlert 2 mod in the fa2files category (for example, <snowmd.ini>).
+This is the only case where non-FA2 files in the fa2files category will be permitted - no other FinalAlert 2 mod can do this.
+
+4. Files placed in any other category will all be inserted into expandmd06.mix (or expand06.mix for the Terrain Expansion FinalAlert 2 mod).
+You can place <expandmd06.mix> in the video category if you prefer to pre-compile it yourself.
+
+The rest of the steps are the same as for a normal plugin.
+
+Note that the <marble.mix> patching facility was written with the Terrain Expansion specifically in mind so please make use of this if you are able.
